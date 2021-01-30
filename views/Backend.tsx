@@ -1,37 +1,12 @@
-import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-
 import TecCard from 'components/TecCard'
-import { ThemeTypes } from 'types'
+import useStyles from 'styles/ViewsStyles'
 
 const nodeSvg = 'nodejs.svg'
 const expressPng = 'Express.png'
 const mongoSvg = 'mongodb.svg'
 const gitSvg = 'git.svg'
-
-const useStyles = makeStyles((theme:ThemeTypes) => ({
-  root:{
-    transform:'skew(0deg,-10deg)',
-    width:'90vw',
-    display:'flex',
-    justifyContent:'center',
-    [theme.breakpoints.down('sm')]:{
-      flexDirection:'column'
-    }
-  },
-  background:{
-    background:theme.palette.terciary.main,
-    width:'100%',
-    minHeight:'100vh',
-    transform:'skew(0deg,10deg) translateY(120px)',
-    padding:'200px 0',
-    marginBottom:250
-  },
-  text:{
-    textAlign:'center'
-  }
-}))
 
 export default function Backend() {
   const classes = useStyles()
@@ -39,10 +14,10 @@ export default function Backend() {
     <Grid 
       item container 
       justify="center"
-      className={classes.background}
+      className={classes.backendBackground}
     >
       <div
-        className={classes.root}
+        className={classes.backendRoot}
       >
         <Typography
         variant="h1"

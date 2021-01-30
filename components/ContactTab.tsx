@@ -1,17 +1,10 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import IconButton from '@material-ui/core/IconButton'
-import { ThemeTypes , SizeType } from 'types'
-
-const useStyles = makeStyles((theme:ThemeTypes) => ({
-  icon:{
-    color:theme.palette.text.main,
-    margin:5
-  }
-}))
+import { SizeType } from 'types'
+import useStyles from 'styles/ComponentsStyles'
 
 export default function ContactTab({size}:{size:SizeType}):JSX.Element{
   const classes = useStyles()

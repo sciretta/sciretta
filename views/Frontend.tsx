@@ -1,39 +1,13 @@
-import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import useStyles from 'styles/ViewsStyles'
 
 import TecCard from '../components/TecCard'
-import { ThemeTypes } from 'types'
 
 const reactSvg = 'React.svg'
 const nextSvg = 'Nextjs.svg'
-const cssSvg = 'css3.svg'
-const htmlSvg = 'html5.svg'
 const javascriptSvg = 'javascript.svg'
 const materialuiSvg = 'materialui.svg'
-
-const useStyles = makeStyles((theme:ThemeTypes) => ({
-  root:{
-    transform:'skew(0deg,10deg)',
-    width:'90vw',
-    display:'flex',
-    justifyContent:'center',
-    [theme.breakpoints.down('sm')]:{
-      flexDirection:'column'
-    }
-  },
-  background:{
-    background:theme.palette.terciary.main,
-    width:'100%',
-    minHeight:'100vh',
-    transform:'skew(0deg,-10deg) translateY(-120px)',
-    padding:'200px 0',
-    marginTop:300
-  },
-  text:{
-    textAlign:'center'
-  }
-}))
 
 export default function Fronted() {
   const classes = useStyles()
@@ -41,10 +15,10 @@ export default function Fronted() {
     <Grid 
       item container 
       justify="center"
-      className={classes.background}
+      className={classes.frontendBackground}
     >
       <div
-        className={classes.root}
+        className={classes.frontendRoot}
       >
         <Typography
           variant="h1"

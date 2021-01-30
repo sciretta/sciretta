@@ -1,4 +1,3 @@
-import { makeStyles } from '@material-ui/core/styles'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -10,28 +9,7 @@ import Grid from '@material-ui/core/Grid'
 import MuiAlert from '@material-ui/lab/Alert'
 import SendIcon from '@material-ui/icons/Send'
 import { useState } from 'react'
-import { ThemeTypes } from 'types'
-
-const useStyles = makeStyles((theme:ThemeTypes) => ({
-  text:{
-    textAlign:'center',
-    width:'100%'
-  },
-  container:{
-    width:'100%'
-  },
-  fields:{
-    backgroundColor:theme.palette.text.main,
-    borderRadius:5
-  },
-  button:{
-    backgroundColor:theme.palette.text.main,
-    color:theme.palette.terciary.main,
-    '&:hover': {
-      backgroundColor: '#fefefe',
-    }
-  }
-}))
+import useStyles from 'styles/ComponentsStyles'
 
 export default function Contact():JSX.Element {
   const classes = useStyles()
@@ -59,7 +37,7 @@ function Alert(props:any) {
 }
 
 
-function MailForm() {
+function MailForm():JSX.Element {
   const classes = useStyles()
   const [success,setSuccess] = useState(false)
   const [error,setError] = useState(false)

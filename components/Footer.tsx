@@ -1,19 +1,8 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import ContactTab from './ContactTab'
-import { ThemeTypes } from 'types'
-
-const useStyles = makeStyles((theme:ThemeTypes) => ({
-  root:{
-    height:'40vh',
-    minHeight:300,
-    background:theme.palette.secondary.main,
-    boxShadow:'none',
-    backdropFilter: 'blur(6px)'
-  }
-}))
+import useStyles from 'styles/ComponentsStyles'
 
 export default function Footer() {
   const classes = useStyles()

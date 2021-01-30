@@ -5,6 +5,9 @@ interface NewThemeInterface {
     text:{
       main:string
     },
+    primary:{
+      main:string
+    },
     secondary:{
       main:string
     },
@@ -14,7 +17,8 @@ interface NewThemeInterface {
   },
   breakpoints:{
     down:(key:string)=>string
-  }
+  },
+  spacing:(factor:number)=>any
 }
 
 export type ThemeTypes = ThemeOptions & NewThemeInterface

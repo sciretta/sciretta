@@ -1,30 +1,15 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import { ThemeTypes } from 'types'
-
-const useStyles = makeStyles((theme:ThemeTypes) => ({
-  root: {
-    width:400,
-    height:300,
-    margin:20,
-    [theme.breakpoints.down('sm')]:{
-      width:260
-    }
-  },
-  text:{
-    textAlign:'center'
-  }
-}))
+import useStyles from 'styles/ComponentsStyles'
 
 export default function TecCard({img,name}:{img:string,name:string}) {
   const classes = useStyles()
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.cardRoot}>
       <CardMedia
         component="img"
         alt={name}
