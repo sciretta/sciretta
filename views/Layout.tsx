@@ -13,7 +13,6 @@ import ContactTab from 'components/ContactTab'
 import Footer from 'components/Footer'
 import useStyles from 'styles/ViewsStyles'
 
-
 function ScrollTop(props:any) {
   const { children, window } = props
   const classes = useStyles()

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -10,13 +11,15 @@ export default function TecCard({img,name}:{img:string,name:string}) {
 
   return (
     <Card className={classes.cardRoot}>
-      <CardMedia
-        component="img"
-        alt={name}
-        height="200"
-        image={img}
-        title={name}
-      />
+      <CardMedia>
+        <Image
+          width={700}
+          height={370}
+          src={"/"+img}
+          alt={name}
+          layout="responsive"
+        />
+      </CardMedia>
       <CardContent>
         <Typography 
           className={classes.text}

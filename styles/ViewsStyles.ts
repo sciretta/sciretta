@@ -4,6 +4,7 @@ import { ThemeTypes } from 'types'
 const bgImg = 'javascript-code.jpg'
 
 const useStyles = makeStyles((theme:ThemeTypes) => ({
+  //main
   root:{
     paddingTop:50,
     minHeight:'95vh'
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
       height:350
     }
   },
+  //backend
   backendRoot:{
     transform:'skew(0deg,-10deg)',
     width:'90vw',
@@ -36,6 +38,7 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
   text:{
     textAlign:'center'
   },
+  //frontend
   frontendRoot:{
     transform:'skew(0deg,10deg)',
     width:'90vw',
@@ -53,6 +56,7 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
     padding:'200px 0',
     marginTop:300
   },
+  //layout
   layoutRoot: {
     position: 'fixed',
     bottom: theme.spacing(2),
@@ -96,6 +100,28 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
   },
   mainContainer:{
     minHeight:'50vh'
+  },
+  //experience
+  experienceRoot:{
+    transform:'skew(0deg,10deg)',
+    width:'90vw',
+    display:'flex',
+    justifyContent:'center',
+    [theme.breakpoints.down('sm')]:{
+      flexDirection:'column'
+    }
+  },
+  experienceBackground:{
+    background:theme.palette.terciary.main,
+    width:'100%',
+    minHeight:'60vh',
+    transform:'skew(0deg,-10deg) translateY(-120px)',
+    padding:'200px 0',
+    marginTop:230
+    // marginBottom:250
+  },
+  message:{
+    
   }
 }))
 

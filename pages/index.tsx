@@ -12,6 +12,7 @@ import Layout from 'views/Layout'
 import Main from 'views/Main'
 import Frontend from 'views/Frontend'
 import Backend from 'views/Backend'
+import Experience from 'views/Experience'
 
 
 export default function Home() {
@@ -27,9 +28,10 @@ export default function Home() {
 	        <Frontend/>
 	        <Backend/>
 	      </Suspense> */}
-		<Main/>
-		<Frontend/>
-		<Backend/>
+        <Main/>
+        <Frontend/>
+        <Backend/>
+        <Experience/>
       </Layout>
     </ThemeProvider>
   )

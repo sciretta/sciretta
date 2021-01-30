@@ -24,7 +24,7 @@ export default function Main() {
             variant="h1"
             className={classes.text}
           >
-            {`Hi, i'm Leonardo and i'm a Web Developer from Venezuela`}
+            {`Hi 👋, i'm Leonardo and i'm a Web Developer from Venezuela`}
           </Typography>
         </Grid>
         <Grid item>
