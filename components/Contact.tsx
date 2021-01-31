@@ -20,7 +20,7 @@ export default function Contact():JSX.Element {
   return (
     <div className={classes.container}>
       <Accordion square expanded={expanded} onChange={handleChange}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+        <AccordionSummary aria-controls="panel1d-content" >
           <Typography variant="h3" className={classes.text}>Contact</Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -47,7 +47,8 @@ function MailForm():JSX.Element {
     const from_name = document.getElementById('from_name') as HTMLInputElement
     const email = document.getElementById('email') as HTMLInputElement
     const message = document.getElementById('message') as HTMLInputElement
-    if(!from_name || !email || !message) return setIncomplete(true)
+    if(!from_name.value || !email.value || !message.value) return setIncomplete(true)
+
 
     const data = {
         service_id: 'service_3ovv1h6',
@@ -61,11 +62,11 @@ function MailForm():JSX.Element {
     }
      
     fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
-        }
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     })
     .then((res) => {
       if(res.status===200){
@@ -80,13 +81,13 @@ function MailForm():JSX.Element {
     })
     .catch(()=>{
       setError(true)
-      setIncomplete(false)
     })
   }
 
   const handleClose = () => {
     setSuccess(false)
     setError(false)
+    setIncomplete(false)
   }
 
   return (
