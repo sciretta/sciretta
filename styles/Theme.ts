@@ -1,8 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import grey from '@material-ui/core/colors/grey'
-import { ThemeTypes } from 'types'
 
-const theme: ThemeTypes = {
+const theme: any = {
   palette: {
   	primary:{
   		main:'rgba(0,0,0,.3)'
@@ -14,7 +13,7 @@ const theme: ThemeTypes = {
       main:'rgba(0,0,0,.95)'
     },
     text:{
-      main:grey[50]
+      main:'#fafafa'
     },
     background:{
       paper:'rgba(33,33,33,.95)'
