@@ -9,14 +9,6 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
     paddingTop:50,
     minHeight:'95vh'
   },
-  avatar:{
-    width:400,
-    height:400,
-    [theme.breakpoints.down('sm')]:{
-      width:350,
-      height:350
-    }
-  },
   //backend
   backendRoot:{
     transform:'skew(0deg,-10deg)',

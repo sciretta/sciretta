@@ -3,10 +3,18 @@ import Typography from '@material-ui/core/Typography'
 import Contact from 'components/Contact'
 import useStyles from 'styles/ViewsStyles'
 import Image from 'next/image'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const avatar = 'avatar.png'
 
-export default function Main() {
+const Main = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('xs'))
+  let avatarRadius = 400
+  if(matches){
+    avatarRadius = 320
+  }
   const classes = useStyles()
   return (
     <>
@@ -28,12 +36,11 @@ export default function Main() {
         </Grid>
         <Grid item>
           <Image
-            width={400}
-            height={400}
+            width={avatarRadius}
+            height={avatarRadius}
             src={"/"+avatar}
             alt="Avatar"
             layout="fixed"
-            className={classes.avatar} 
           />
         </Grid>
       </Grid>
@@ -43,3 +50,5 @@ export default function Main() {
     </>
   )
 }
+
+export default Main
