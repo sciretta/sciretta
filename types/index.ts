@@ -24,3 +24,13 @@ interface NewThemeInterface {
 export type ThemeTypes = ThemeOptions & NewThemeInterface
 
 export type SizeType = "small" | "inherit" | "default" | "large" | undefined
+
+export interface DataInterface {
+  from_name:string
+  email:string
+  message:string
+}
+
+export interface SuccessInterface {
+  success:boolean
+}
