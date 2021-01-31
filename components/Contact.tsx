@@ -10,6 +10,7 @@ import MuiAlert from '@material-ui/lab/Alert'
 import SendIcon from '@material-ui/icons/Send'
 import { useState } from 'react'
 import useStyles from 'styles/ComponentsStyles'
+import { DataInterface } from 'types'
 
 export default function Contact():JSX.Element {
   const classes = useStyles()
@@ -49,27 +50,22 @@ function MailForm():JSX.Element {
     const message = document.getElementById('message') as HTMLInputElement
     if(!from_name.value || !email.value || !message.value) return setIncomplete(true)
 
-
-    const data = {
-        service_id: 'service_3ovv1h6',
-        template_id: 'template_jbpbsrv',
-        user_id: 'user_XYey1OUQ7AfPYfRsCJAJk',
-        template_params: {
-          from_name:from_name.value,
-          email:email.value,
-          message:message.value
-        }
+    const data: DataInterface = {
+      from_name:from_name.value,
+      email:email.value,
+      message:message.value
     }
      
-    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+    fetch('/api/sendEmail', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-    .then((res) => {
-      if(res.status===200){
+    .then(res=>res.json())
+    .then((res:{success:boolean}) => {
+      if(res.success){
         setSuccess(true)
         from_name.value = ""
         email.value = ""
