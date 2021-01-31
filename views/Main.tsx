@@ -4,6 +4,7 @@ import Avatar from '@material-ui/core/Avatar'
 
 import Contact from 'components/Contact'
 import useStyles from 'styles/ViewsStyles'
+import Image from 'next/image'
 
 const avatar = 'avatar.png'
 
@@ -28,10 +29,13 @@ export default function Main() {
           </Typography>
         </Grid>
         <Grid item>
-          <Avatar 
+          <Image
+            width={400}
+            height={400}
+            src={"/"+avatar}
+            alt="Avatar"
+            layout="fixed"
             className={classes.avatar} 
-            alt="Leonardo" 
-            src={avatar} 
           />
         </Grid>
       </Grid>
