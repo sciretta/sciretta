@@ -40,7 +40,10 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
       height:230
     }
   },
-  expCard:{
+  expCard: {
+    margin:20,
+  },
+  actionCard:{
     width:390,
     height:430,
     [theme.breakpoints.down('sm')]:{

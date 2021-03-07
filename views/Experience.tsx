@@ -20,7 +20,7 @@ export default function Experience() {
           variant="h1"
           className={classes.text}
         >
-          Experience:
+          Experience💪:
         </Typography>
         <Grid 
           item container

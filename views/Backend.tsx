@@ -20,7 +20,7 @@ export default function Backend() {
         variant="h1"
         className={classes.text}
       >
-        Backend skills:
+        Backend skills👌:
       </Typography>
         <Grid 
           item container

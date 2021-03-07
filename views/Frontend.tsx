@@ -20,7 +20,7 @@ export default function Fronted() {
           variant="h1"
           className={classes.text}
         >
-          Fronted skills:
+          Fronted skills✌:
         </Typography>
         <Grid 
           item container

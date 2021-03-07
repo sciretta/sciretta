@@ -36,7 +36,7 @@ export default function TecCard({img,name,exp}:CardInterface) {
 
   if(exp){
     content = <CardActionArea 
-      className={classes.expCard} href={exp.url}
+      className={classes.actionCard} href={exp.url}
       target={"_blank"}
     >
       {content}
@@ -52,7 +52,7 @@ export default function TecCard({img,name,exp}:CardInterface) {
   }
 
   return (
-    <Card className={exp?'':classes.card}>
+    <Card className={exp?classes.expCard:classes.card}>
       {content}
     </Card>
   )
