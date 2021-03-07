@@ -31,13 +31,24 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
     boxShadow:'none',
     backdropFilter: 'blur(6px)'
   },
-  cardRoot: {
+  card: {
     width:400,
     height:300,
     margin:20,
     [theme.breakpoints.down('sm')]:{
       width:260,
       height:230
+    }
+  },
+  expCard: {
+    margin:20,
+  },
+  actionCard:{
+    width:390,
+    height:430,
+    [theme.breakpoints.down('sm')]:{
+      width:300,
+      height:370
     }
   }
 }))

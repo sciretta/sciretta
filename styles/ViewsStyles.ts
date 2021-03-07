@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
   },
   //experience
   experienceRoot:{
-    transform:'skew(0deg,10deg)',
+    transform:'skew(0deg,-10deg)',
     width:'90vw',
     display:'flex',
     justifyContent:'center',
@@ -107,13 +107,10 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
     background:theme.palette.terciary.main,
     width:'100%',
     minHeight:'60vh',
-    transform:'skew(0deg,-10deg) translateY(-120px)',
+    transform:'skew(0deg,10deg) translateY(120px)',
     padding:'200px 0',
-    marginTop:230
-    // marginBottom:250
-  },
-  message:{
-    
+    marginTop:230,
+    marginBottom:180
   }
 }))
 

@@ -3,10 +3,7 @@ import Typography from '@material-ui/core/Typography'
 import TecCard from 'components/TecCard'
 import useStyles from 'styles/ViewsStyles'
 
-const nodeSvg = 'nodejs.svg'
-const expressPng = 'Express.png'
-const mongoSvg = 'mongodb.svg'
-const gitSvg = 'git.svg'
+import { backendCards } from 'data'
 
 export default function Backend() {
   const classes = useStyles()
@@ -23,14 +20,14 @@ export default function Backend() {
         variant="h1"
         className={classes.text}
       >
-        Backend skills:
+        Backend skills👌:
       </Typography>
         <Grid 
           item container
           justify="center"
         >
           {
-            cards.map(card=>(
+            backendCards.map(card=>(
               <Grid item key={card.name}>
                 <TecCard 
                   img={card.img} 
@@ -44,10 +41,3 @@ export default function Backend() {
     </Grid>
   )
 }
-
-const cards = [
-  {img:nodeSvg,name:'Nodejs'},
-  {img:expressPng,name:'Express.js'},
-  {img:mongoSvg,name:'MongoDB'},
-  {img:gitSvg,name:'GIT'}
-]
