@@ -1,13 +1,9 @@
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import useStyles from 'styles/ViewsStyles'
-
 import TecCard from '../components/TecCard'
 
-const reactSvg = 'React.svg'
-const nextSvg = 'Nextjs.svg'
-const javascriptSvg = 'javascript.svg'
-const materialuiSvg = 'materialui.svg'
+import { frontendCards } from 'data'
 
 export default function Fronted() {
   const classes = useStyles()
@@ -31,7 +27,7 @@ export default function Fronted() {
           justify="center"
         >
           {
-            cards.map(card=>(
+            frontendCards.map(card=>(
               <Grid item key={card.name}>
                 <TecCard
                   img={card.img} 
@@ -45,10 +41,3 @@ export default function Fronted() {
     </Grid>
   )
 }
-
-const cards = [
-  {img:reactSvg,name:'React.js'},
-  {img:nextSvg,name:'Next.js'},
-  {img:materialuiSvg,name:'Material-ui'},
-  {img:javascriptSvg,name:'Javascript'}
-]

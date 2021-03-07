@@ -1,6 +1,9 @@
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import TecCard from 'components/TecCard'
 import useStyles from 'styles/ViewsStyles'
+
+import { experienceCards } from 'data'
 
 export default function Experience() {
   const classes = useStyles()
@@ -13,16 +16,27 @@ export default function Experience() {
       <div
         className={classes.experienceRoot}
       >
+        <Typography
+          variant="h1"
+          className={classes.text}
+        >
+          Experience:
+        </Typography>
         <Grid 
           item container
           justify="center"
         >
-          <Typography
-            variant="h3"
-            className={classes.text}
-          >
-I am currently an inexperienced web developer looking for his first job, I have been studying web development for 2 years and I feel ready to face my first job challenge 💪
-          </Typography>
+          {
+            experienceCards.map(card=>(
+              <Grid item key={card.name}>
+                <TecCard
+                  img={card.img} 
+                  name={card.name}
+                  exp={card.exp}
+                />
+              </Grid>
+            ))
+          }
         </Grid>
       </div>
     </Grid>

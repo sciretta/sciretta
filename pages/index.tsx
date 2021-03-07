@@ -28,9 +28,9 @@ export default function Home() {
       </Head>
       <Layout>
         <Main/>
+        <Experience/>
         <Frontend/>
         <Backend/>
-        <Experience/>
       </Layout>
     </ThemeProvider>
   )

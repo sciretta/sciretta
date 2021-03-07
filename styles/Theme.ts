@@ -10,7 +10,7 @@ const theme: any = {
       main:'rgba(0,0,0,.7)'
     },
     terciary:{
-      main:'rgba(0,0,0,.95)'
+      main:'rgba(0,0,0,.94)'
     },
     text:{
       main:'#fafafa'
@@ -26,10 +26,16 @@ const theme: any = {
       fontSize:'3.5rem',
       color:grey[50]
     },
-    h3:{
+    h2:{
       fontFamily:"system-ui",
       fontWeight:700,
       fontSize:'2rem',
+      color:grey[50]
+    },
+    h3:{
+      fontFamily:"system-ui",
+      fontWeight:500,
+      fontSize:'1.8rem',
       color:grey[50]
     },
     h4:{

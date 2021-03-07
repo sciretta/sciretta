@@ -34,3 +34,12 @@ export interface DataInterface {
 export interface SuccessInterface {
   success:boolean
 }
+
+export interface CardInterface {
+  img:string
+  name:string
+  exp?:{
+    time:string
+    url:string
+  }
+}
