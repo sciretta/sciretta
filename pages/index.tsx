@@ -1,25 +1,16 @@
+import loadable from '@loadable/component'
 import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
-import Skeleton from '@material-ui/lab/Skeleton'
 import { lightTheme } from 'styles/Theme'
-import Layout from 'views/Layout'
+import { Loading } from 'components/Loading'
 
-import Main from 'views/Main'
-import Frontend from 'views/Frontend'
-import Backend from 'views/Backend'
-import Experience from 'views/Experience'
-import { useEffect, useState } from 'react'
-
+const Layout = loadable(() => import('views/Layout'))
+const Main = loadable(() => import('views/Main'))
+const Frontend = loadable(() => import('views/Frontend'))
+const Backend = loadable(() => import('views/Backend'))
+const Experience = loadable(() => import('views/Experience'))
 
 export default function Home() {
-  const [ loading , setLoading ] = useState(true)
-
-  useEffect(()=>{
-    setLoading(false)
-  },[])
-
-  if(loading) return <Loading/>
-
   return (
     <ThemeProvider theme={lightTheme}>
       <Head>
@@ -27,29 +18,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Main/>
-        <Experience/>
-        <Frontend/>
-        <Backend/>
+        <Main fallback={<Loading display="main section 👋"/>}/>
+        <Experience fallback={<Loading display="experience 💪"/>}/>
+        <Frontend fallback={<Loading display="frontend skills ✌"/>}/>
+        <Backend fallback={<Loading display="backend skills 👌"/>}/>
       </Layout>
     </ThemeProvider>
   )
 }
 
-function Loading(){
-  return(
-	  <Skeleton variant="rect" width={500} height={60}
-	  style={{
-	  	marginTop:'15vh',
-	  	backgroundColor:'rgba(0,0,0,.7)',
-	  	borderRadius:'5px',
-	  	color:'lightgrey',
-	  	fontSize:'20px',
-	  	fontWeight:'bold',
-	  	display:'flex',
-	  	alignItems:'center',
-      justifyContent:'center',
-      width:'100vw'
-	  }}>Loading...</Skeleton>
-	)
-}
+
