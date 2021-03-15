@@ -44,11 +44,11 @@ const useStyles = makeStyles((theme:ThemeTypes) => ({
     margin:20,
   },
   actionCard:{
-    width:390,
-    height:430,
+    minWidth:390,
+    minHeight:430,
     [theme.breakpoints.down('sm')]:{
-      width:300,
-      height:370
+      minWidth:300,
+      minHeight:370
     }
   }
 }))
