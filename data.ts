@@ -29,9 +29,11 @@ const reactSvg = 'React.svg'
 const nextSvg = 'Nextjs.svg'
 const javascriptSvg = 'javascript.svg'
 const materialuiSvg = 'materialui.svg'
+const typescriptSvg = 'typescript.svg'
 export const frontendCards:CardInterface[]  = [
   {img:reactSvg,name:'React.js'},
   {img:nextSvg,name:'Next.js'},
   {img:materialuiSvg,name:'Material-ui'},
-  {img:javascriptSvg,name:'Javascript'}
+  {img:javascriptSvg,name:'Javascript'},
+  {img:typescriptSvg,name:'Typescript'}
 ]
