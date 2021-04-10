@@ -23,7 +23,7 @@ function ScrollTop(props: any) {
     threshold: 100,
   })
 
-  const handleClick = (event: any): React.FC => {
+  const handleClick = (event: any) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
       '#back-to-top-anchor',
     )
