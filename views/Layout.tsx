@@ -1,3 +1,4 @@
+import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -13,7 +14,7 @@ import ContactTab from 'components/ContactTab'
 import Footer from 'components/Footer'
 import useStyles from 'styles/ViewsStyles'
 
-function ScrollTop(props:any) {
+function ScrollTop(props: any) {
   const { children, window } = props
   const classes = useStyles()
   const trigger = useScrollTrigger({
@@ -22,8 +23,10 @@ function ScrollTop(props:any) {
     threshold: 100,
   })
 
-  const handleClick = (event:any) => {
-    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor')
+  const handleClick = (event: any): React.FC => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      '#back-to-top-anchor',
+    )
 
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -32,47 +35,39 @@ function ScrollTop(props:any) {
 
   return (
     <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.layoutRoot}>
+      <div
+        onClick={handleClick}
+        role="presentation"
+        className={classes.layoutRoot}
+      >
         {children}
       </div>
     </Zoom>
   )
 }
 
-export default function Layout(props:JSX.ElementChildrenAttribute) {
+export default function Layout(props: JSX.ElementChildrenAttribute) {
   const classes = useStyles()
   return (
-    <div 
-      className={classes.layoutBackground}
-    >
+    <div className={classes.layoutBackground}>
       <CssBaseline />
       <AppBar className={classes.appBar}>
         <Toolbar>
-          <Button
-            className={classes.button}
-            variant="contained"
-          >
-            <Typography
-              className={classes.text} 
-              variant="h3"
-            >
+          <Button className={classes.button} variant="contained">
+            <Typography className={classes.text} variant="h3">
               Leonardo Sciretta
             </Typography>
           </Button>
           <Hidden xsDown>
-            <ContactTab size={'small'}/>
+            <ContactTab size={'small'} />
           </Hidden>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
-      <Grid 
-        container
-        justify="center"
-        className={classes.mainContainer}
-      >
+      <Grid container justify="center" className={classes.mainContainer}>
         {props.children}
       </Grid>
-      <Footer/>
+      <Footer />
       <ScrollTop {...props}>
         <Fab color="primary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />

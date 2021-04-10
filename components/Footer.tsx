@@ -7,24 +7,18 @@ import useStyles from 'styles/ComponentsStyles'
 export default function Footer() {
   const classes = useStyles()
   return (
-    <Grid 
+    <Grid
       container
       className={classes.root}
       direction="column"
       justify="center"
       alignItems="center"
     >
-      <Grid 
-        item
-      >
-        <ContactTab size={"large"}/>
+      <Grid item>
+        <ContactTab size={'large'} />
       </Grid>
       <Grid item>
-        <Typography
-          variant="h4"
-        >
-          Leonardo ©
-        </Typography>
+        <Typography variant="h4">Leonardo ©</Typography>
       </Grid>
     </Grid>
   )

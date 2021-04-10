@@ -18,13 +18,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Main fallback={<Loading display="main section 👋"/>}/>
-        <Experience fallback={<Loading display="experience 💪"/>}/>
-        <Frontend fallback={<Loading display="frontend skills ✌"/>}/>
-        <Backend fallback={<Loading display="backend skills 👌"/>}/>
+        <Main fallback={<Loading display="main section 👋" />} />
+        <Experience fallback={<Loading display="experience 💪" />} />
+        <Frontend fallback={<Loading display="frontend skills ✌" />} />
+        <Backend fallback={<Loading display="backend skills 👌" />} />
       </Layout>
     </ThemeProvider>
   )
 }
-
-

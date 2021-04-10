@@ -12,25 +12,26 @@ const Main = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('xs'))
   let avatarRadius = 400
-  if(matches){
+  if (matches) {
     avatarRadius = 320
   }
   const classes = useStyles()
   return (
     <>
-      <Grid 
-        item container
-        sm={11} md={10} lg={9} xl={7}
+      <Grid
+        item
+        container
+        sm={11}
+        md={10}
+        lg={9}
+        xl={7}
         direction="column"
         justify="center"
         alignItems="center"
         className={classes.root}
       >
         <Grid item>
-          <Typography
-            variant="h1"
-            className={classes.text}
-          >
+          <Typography variant="h1" className={classes.text}>
             {`Hi 👋, i'm Leonardo and i'm a Full Stack Web Developer from Venezuela`}
           </Typography>
         </Grid>
@@ -38,14 +39,14 @@ const Main = () => {
           <Image
             width={avatarRadius}
             height={avatarRadius}
-            src={"/"+avatar}
+            src={'/' + avatar}
             alt="Avatar"
             layout="fixed"
           />
         </Grid>
       </Grid>
       <Grid container>
-        <Contact/>
+        <Contact />
       </Grid>
     </>
   )
