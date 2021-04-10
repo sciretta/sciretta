@@ -12,72 +12,73 @@ import { useState } from 'react'
 import useStyles from 'styles/ComponentsStyles'
 import { DataInterface } from 'types'
 
-export default function Contact():JSX.Element {
+export default function Contact(): JSX.Element {
   const classes = useStyles()
   const [expanded, setExpanded] = useState(false)
 
-  const handleChange = () => setExpanded(prevExpanded => !prevExpanded)
+  const handleChange = () => setExpanded((prevExpanded) => !prevExpanded)
 
   return (
     <div className={classes.container}>
       <Accordion square expanded={expanded} onChange={handleChange}>
-        <AccordionSummary aria-controls="panel1d-content" >
-          <Typography variant="h3" className={classes.text}>Contact</Typography>
+        <AccordionSummary aria-controls="panel1d-content">
+          <Typography variant="h3" className={classes.text}>
+            Contact
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <MailForm/>
+          <MailForm />
         </AccordionDetails>
       </Accordion>
     </div>
   )
 }
 
-
-function Alert(props:any) {
+function Alert(props: any) {
   return <MuiAlert elevation={6} variant="filled" {...props} />
 }
 
-
-function MailForm():JSX.Element {
+function MailForm(): JSX.Element {
   const classes = useStyles()
-  const [success,setSuccess] = useState(false)
-  const [error,setError] = useState(false)
-  const [incomplete,setIncomplete] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
+  const [incomplete, setIncomplete] = useState(false)
 
   function sendEmail() {
     const from_name = document.getElementById('from_name') as HTMLInputElement
     const email = document.getElementById('email') as HTMLInputElement
     const message = document.getElementById('message') as HTMLInputElement
-    if(!from_name.value || !email.value || !message.value) return setIncomplete(true)
+    if (!from_name.value || !email.value || !message.value)
+      return setIncomplete(true)
 
     const data: DataInterface = {
-      from_name:from_name.value,
-      email:email.value,
-      message:message.value
+      from_name: from_name.value,
+      email: email.value,
+      message: message.value,
     }
-     
+
     fetch('/api/sendEmail', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     })
-    .then(res=>res.json())
-    .then((res:{success:boolean}) => {
-      if(res.success){
-        setSuccess(true)
-        from_name.value = ""
-        email.value = ""
-        message.value = ""
-      }else{
+      .then((res) => res.json())
+      .then((res: { success: boolean }) => {
+        if (res.success) {
+          setSuccess(true)
+          from_name.value = ''
+          email.value = ''
+          message.value = ''
+        } else {
+          setError(true)
+        }
+        setIncomplete(false)
+      })
+      .catch(() => {
         setError(true)
-      }
-      setIncomplete(false)
-    })
-    .catch(()=>{
-      setError(true)
-    })
+      })
   }
 
   const handleClose = () => {
@@ -88,8 +89,8 @@ function MailForm():JSX.Element {
 
   return (
     <>
-      <Grid 
-        container 
+      <Grid
+        container
         justify="center"
         alignItems="flex-start"
         alignContent="center"
@@ -100,16 +101,18 @@ function MailForm():JSX.Element {
             className={classes.fields}
             placeholder="Name"
             id="from_name"
-            variant="outlined" error={incomplete}
+            variant="outlined"
+            error={incomplete}
             autoComplete="from_name"
           />
         </Grid>
         <Grid item>
-          <TextField 
+          <TextField
             className={classes.fields}
             placeholder="Email"
             id="email"
-            variant="outlined" error={incomplete}
+            variant="outlined"
+            error={incomplete}
             autoComplete="email"
           />
         </Grid>
@@ -125,16 +128,11 @@ function MailForm():JSX.Element {
             error={incomplete}
           />
         </Grid>
-        <Grid 
-          item
-          container 
-          justify="center"
-          alignItems="center"
-        >
+        <Grid item container justify="center" alignItems="center">
           <Button
             variant="contained"
             color="primary"
-            endIcon={<SendIcon/>}
+            endIcon={<SendIcon />}
             onClick={sendEmail}
             disableElevation
             className={classes.button}
@@ -144,24 +142,20 @@ function MailForm():JSX.Element {
         </Grid>
       </Grid>
       <Snackbar
-        anchorOrigin={{ vertical:'top', horizontal:'center' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         open={success}
         onClose={handleClose}
         autoHideDuration={5000}
       >
-        <Alert severity="success">
-          Email sent!
-        </Alert>
+        <Alert severity="success">Email sent!</Alert>
       </Snackbar>
       <Snackbar
-        anchorOrigin={{ vertical:'top', horizontal:'center' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         open={error}
         onClose={handleClose}
         autoHideDuration={5000}
       >
-        <Alert severity="error">
-          Something was wrong!
-        </Alert>
+        <Alert severity="error">Something was wrong!</Alert>
       </Snackbar>
     </>
   )

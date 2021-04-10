@@ -8,34 +8,22 @@ import { frontendCards } from 'data'
 export default function Fronted() {
   const classes = useStyles()
   return (
-    <Grid 
-      item container 
+    <Grid
+      item
+      container
       justify="center"
       className={classes.frontendBackground}
     >
-      <div
-        className={classes.frontendRoot}
-      >
-        <Typography
-          variant="h1"
-          className={classes.text}
-        >
+      <div className={classes.frontendRoot}>
+        <Typography variant="h1" className={classes.text}>
           Frontend skills✌:
         </Typography>
-        <Grid 
-          item container
-          justify="center"
-        >
-          {
-            frontendCards.map(card=>(
-              <Grid item key={card.name}>
-                <TecCard
-                  img={card.img} 
-                  name={card.name}
-                />
-              </Grid>
-            ))
-          }
+        <Grid item container justify="center">
+          {frontendCards.map((card) => (
+            <Grid item key={card.name}>
+              <TecCard img={card.img} name={card.name} />
+            </Grid>
+          ))}
         </Grid>
       </div>
     </Grid>
