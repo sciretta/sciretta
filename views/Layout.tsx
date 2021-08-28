@@ -51,13 +51,16 @@ export default function Layout(props: JSX.ElementChildrenAttribute) {
   return (
     <div className={classes.layoutBackground}>
       <CssBaseline />
-      <AppBar className={classes.appBar}>
+      <AppBar>
         <Toolbar>
-          <Button className={classes.button} variant="contained">
-            <Typography className={classes.text} variant="h3">
-              Leonardo Sciretta
-            </Typography>
-          </Button>
+          <Grid container justify="center">
+            <Button className={classes.button} variant="contained">
+              <Typography className={classes.text} variant="h3">
+                Leonardo Sciretta
+              </Typography>
+            </Button>
+          </Grid>
+
           <Hidden xsDown>
             <ContactTab size={'small'} />
           </Hidden>

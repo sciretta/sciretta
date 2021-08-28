@@ -57,36 +57,17 @@ const useStyles = makeStyles((theme: ThemeTypes) => ({
     backdropFilter: 'blur(6px)',
     borderRadius: '50%',
   },
-  appBar: {
-    boxShadow: 'none',
-    backdropFilter: 'blur(6px)',
-    display: 'flex',
-    alignItems: 'flex-end',
-    [theme.breakpoints.down('xs')]: {
-      alignItems: 'center',
-    },
-  },
   layoutBackground: {
     backgroundImage: `url(${bgImg})`,
     backgroundRepeat: ' no-repeat',
+    backgroundPosition: '50% 50%',
     backgroundAttachment: 'fixed',
-    backgroundSize: '1800px 1100px',
+    backgroundSize: 'cover',
   },
   button: {
     background: theme.palette.primary.main,
     textTransform: 'none',
     width: 300,
-    marginRight: '25vw',
-    flexGrow: 1,
-    [theme.breakpoints.down('md')]: {
-      marginRight: '19vw',
-    },
-    [theme.breakpoints.down('sm')]: {
-      marginRight: 43,
-    },
-    [theme.breakpoints.down('xs')]: {
-      marginRight: 0,
-    },
     '&:hover': {
       backgroundColor: theme.palette.secondary.main,
     },

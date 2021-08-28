@@ -5,7 +5,7 @@ export function Loading({ display }: { display: string }) {
     <>
       <Skeleton
         variant="rect"
-        width={500}
+        width={600}
         height={60}
         style={{
           backgroundColor: 'rgba(0,0,0,.85)',
@@ -20,7 +20,7 @@ export function Loading({ display }: { display: string }) {
           margin: 20,
         }}
       >
-        🤞 Loading {display}...
+        🤞 Loading {display}
       </Skeleton>
     </>
   )
