@@ -32,7 +32,7 @@ const Main = () => {
       >
         <Grid item>
           <Typography variant="h1" className={classes.text}>
-            {`Hi 👋, i'm Leonardo and i'm a Full Stack Web Developer from Venezuela`}
+            {`Hi 👋, i'm Leonardo and i'm JavaScript & TypeScript Fullstack Developer from Venezuela`}
           </Typography>
         </Grid>
         <Grid item>

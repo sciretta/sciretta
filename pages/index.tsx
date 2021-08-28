@@ -7,6 +7,7 @@ import { Loading } from 'components/Loading'
 const Layout = loadable(() => import('views/Layout'))
 const Main = loadable(() => import('views/Main'))
 const Frontend = loadable(() => import('views/Frontend'))
+const General = loadable(() => import('views/General'))
 const Backend = loadable(() => import('views/Backend'))
 const Experience = loadable(() => import('views/Experience'))
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Layout>
         <Main fallback={<Loading display="main section 👋" />} />
         <Experience fallback={<Loading display="experience 💪" />} />
+        <General fallback={<Loading display="general skills 📖" />} />
         <Frontend fallback={<Loading display="frontend skills ✌" />} />
         <Backend fallback={<Loading display="backend skills 👌" />} />
       </Layout>

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: ThemeTypes) => ({
     minHeight: '100vh',
     transform: 'skew(0deg,10deg) translateY(120px)',
     padding: '200px 0',
-    marginBottom: 250,
+    marginBottom: 350,
   },
   text: {
     textAlign: 'center',
@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme: ThemeTypes) => ({
     transform: 'skew(0deg,-10deg) translateY(-120px)',
     padding: '200px 0',
     marginTop: 300,
+    marginBottom: 100,
   },
   //layout
   layoutRoot: {
@@ -95,7 +96,7 @@ const useStyles = makeStyles((theme: ThemeTypes) => ({
   },
   //experience
   experienceRoot: {
-    transform: 'skew(0deg,-10deg)',
+    transform: 'skew(0deg,10deg)',
     width: '90vw',
     display: 'flex',
     justifyContent: 'center',
@@ -107,10 +108,10 @@ const useStyles = makeStyles((theme: ThemeTypes) => ({
     background: theme.palette.terciary.main,
     width: '100%',
     minHeight: '60vh',
-    transform: 'skew(0deg,10deg) translateY(120px)',
+    transform: 'skew(0deg,-10deg) translateY(120px)',
     padding: '200px 0',
     marginTop: 230,
-    marginBottom: 180,
+    marginBottom: 350,
   },
 }))
 
