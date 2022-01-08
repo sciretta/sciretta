@@ -4786,8 +4786,8 @@
     },
     {
       "type": "text",
-      "version": 29,
-      "versionNonce": 965359346,
+      "version": 56,
+      "versionNonce": 896287439,
       "isDeleted": false,
       "id": "AitdH69wYewxGWIlDOX1S",
       "fillStyle": "hachure",
@@ -4796,12 +4796,12 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -2579.4226241338747,
-      "y": 1352.3309664045155,
+      "x": -2638.089209420333,
+      "y": 1344.3309867495677,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 254.2222222222221,
-      "height": 64.99999999999994,
+      "width": 351,
+      "height": 66,
       "seed": 678525490,
       "groupIds": [],
       "strokeSharpness": "sharp",
@@ -4811,15 +4811,15 @@
           "type": "arrow"
         }
       ],
-      "updated": 1641518069220,
+      "updated": 1641678446717,
       "fontSize": 51.99999999999997,
       "fontFamily": 1,
-      "text": "Draggable",
-      "baseline": 45.99999999999994,
+      "text": "NO Draggable",
+      "baseline": 47,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Draggable"
+      "originalText": "NO Draggable"
     },
     {
       "type": "arrow",
