@@ -1,4 +1,4 @@
-import WhoAmI from 'modules/who-am-i/WhoAmI'
+import WhoAmI from 'src/modules/who-am-i/WhoAmI'
 // const Main = loadable(() => import('views/Main'))
 // <Main fallback={<Loading display="main section 👋" />} />
 
