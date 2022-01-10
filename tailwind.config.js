@@ -6,7 +6,17 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darker: '#040309',
+        dark: '#0E2128',
+        light: '#59899D',
+        lighter: '#ADBECC',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+    },
   },
   variants: {
     extend: {},
