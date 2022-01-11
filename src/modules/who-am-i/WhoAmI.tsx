@@ -5,10 +5,8 @@ const primaryFontStyle =
 
 function WhoAmI() {
   return (
-    <>
-      <div style={{ border: '1px solid yellow' }}>
-        Hi im a Leonardo Sciretta
-      </div>
+    <div className="h-screen min-h-min bg-dark flex justify-center items-center flex-col">
+      <div>Hi im a Leonardo Sciretta</div>
       <Typewriter
         onInit={(typewriter) => {
           typewriter
@@ -29,7 +27,7 @@ function WhoAmI() {
           cursor: `<span style="${primaryFontStyle}">|</span>`,
         }}
       />
-    </>
+    </div>
   )
 }
 
