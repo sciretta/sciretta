@@ -17,6 +17,9 @@ module.exports = {
         xs: '2px',
       },
     },
+    fontFamily: {
+      body: ['Open Sans', 'Helvetica'],
+    },
   },
   variants: {
     extend: {},
