@@ -43,7 +43,10 @@ function WhoAmI() {
         transition={{ type: 'just', delay: 1.2 }}
         className="mt-5 flex justify-center items-center w-10/12 h-20"
       >
-        <button className="w-16 h-16" onClick={() => console.log('github')}>
+        <button
+          className="w-16 h-16"
+          onClick={() => open('https://github.com/sciretta')}
+        >
           <img src="./github.svg" alt="Github" />
         </button>
         <button
@@ -52,7 +55,12 @@ function WhoAmI() {
         >
           <img src="./gmail.svg" alt="Github" />
         </button>
-        <button className="w-16 h-16" onClick={() => console.log('linkedin')}>
+        <button
+          className="w-16 h-16"
+          onClick={() =>
+            open('https://www.linkedin.com/in/leonardo-sciretta-a43939201')
+          }
+        >
           <img src="./linkedin.svg" alt="Github" />
         </button>
       </motion.div>
