@@ -41,27 +41,20 @@ function WhoAmI() {
         initial={{ y: '50vh' }}
         animate={{ y: 0 }}
         transition={{ type: 'just', delay: 1.2 }}
+        className="mt-5 flex justify-center items-center w-10/12 h-20"
       >
-        <div className="mt-5 flex justify-center items-center w-10/12 h-20">
-          <button
-            className="w-16 h-16 sepia-0"
-            onClick={() => console.log('github')}
-          >
-            <img src="./github.svg" alt="Github" />
-          </button>
-          <button
-            className="ml-6 mr-6 w-16 h-16 sepia-0"
-            onClick={() => console.log('gmail')}
-          >
-            <img src="./gmail.svg" alt="Github" />
-          </button>
-          <button
-            className="w-16 h-16 sepia-0"
-            onClick={() => console.log('linkedin')}
-          >
-            <img src="./linkedin.svg" alt="Github" />
-          </button>
-        </div>
+        <button className="w-16 h-16" onClick={() => console.log('github')}>
+          <img src="./github.svg" alt="Github" />
+        </button>
+        <button
+          className="ml-6 mr-6 w-16 h-16"
+          onClick={() => console.log('gmail')}
+        >
+          <img src="./gmail.svg" alt="Github" />
+        </button>
+        <button className="w-16 h-16" onClick={() => console.log('linkedin')}>
+          <img src="./linkedin.svg" alt="Github" />
+        </button>
       </motion.div>
     </div>
   )
