@@ -8,8 +8,10 @@ export default function Home() {
   return (
     <div className="bg-dark">
       <TopBar />
-      <WhoAmI />
-      <Skills />
+      <div className="p-5">
+        <WhoAmI />
+        <Skills />
+      </div>
     </div>
   )
 }
