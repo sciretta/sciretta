@@ -1,11 +1,17 @@
+import { motion } from 'framer-motion'
 import React from 'react'
+import { Skill } from 'src/modules/shared/DataTypes'
 
-function SkillCard() {
+function SkillCard({ data, onSelect }: { data: Skill; onSelect: () => void }) {
   return (
-    <div
+    <motion.div
+      onClick={onSelect}
+      layoutId={data.name}
       className="h-[300px] w-[300px] md:h-[340px] md:w-[350px] m-1 rounded-sm"
       style={{ border: '1px solid yellow' }}
-    ></div>
+    >
+      compact
+    </motion.div>
   )
 }
 
