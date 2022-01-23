@@ -27,7 +27,7 @@ function WhoAmI() {
         initial={{ opacity: 0 }}
         transition={{ type: 'just', delay: 0.6 }}
       >
-        <div className="text-lighter text-3xl font-medium  font-body mb-10">
+        <div className="text-lighter text-3xl font-medium font-body mb-10">
           Hello I am
         </div>
         <div className="text-lighter  font-medium text-6xl font-body mb-10">

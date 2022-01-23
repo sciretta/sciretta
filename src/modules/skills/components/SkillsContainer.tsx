@@ -23,8 +23,7 @@ function SkillsContainer({
       }}
       dragElastic={0.6}
       ref={containerRef}
-      className="h-[600px] w-[340px] md:h-[900px] md:w-[380px] m-5 overflow-y-auto rounded-lg flex flex-col justify-start items-center pt-5"
-      style={{ border: '1px solid yellow' }}
+      className="h-[700px] w-[400px] md:h-[1000px] md:w-[600px] m-5 overflow-y-auto rounded-lg flex flex-col justify-start items-center pt-5 bg-darker"
     >
       <div className="select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 hover:cursor-grab active:cursor-grabbing">
         {data.type}
@@ -34,14 +33,15 @@ function SkillsContainer({
           <SkillCard
             key={item.name}
             data={item}
-            onSelect={() => setId(item.name)}
+            containerName={data.type}
+            onSelect={() => setId(`${data.type}-${item.name}`)}
           />
         ))}
       </div>
       <button
         onClick={() =>
           containerRef.current?.scrollBy({
-            top: 300,
+            top: 800,
             behavior: 'smooth',
           })
         }

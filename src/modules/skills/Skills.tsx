@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { allSkills } from '../shared/Data'
+import { findSkillImage } from '../shared/utils'
 import SkillsContainer from './components/SkillsContainer'
 
 function Skills() {
@@ -17,25 +18,26 @@ function Skills() {
           ))}
         </div>
         {id && (
-          <>
-            <div
-              className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            onClick={() => setId(null)}
+          >
+            <motion.div
+              layoutId={id}
               onClick={() => setId(null)}
+              className=" ml-auto mr-auto z-50 h-[500px] w-[440px] md:h-[700px] md:w-[600px] rounded-sm bg-dark px-10 py-10 flex flex-col rounded-md"
             >
-              <motion.div
-                layoutId={id}
-                onClick={() => setId(null)}
-                className=" ml-auto mr-auto z-50 h-[300px] w-[300px] md:h-[600px] md:w-[700px] m-1 rounded-sm"
-                style={{ border: '1px solid yellow' }}
-              >
-                expanded
-              </motion.div>
               <div
-                className="opacity-50 fixed inset-0 z-40 bg-black"
-                // onClick={() => setId(null)}
-              ></div>
-            </div>
-          </>
+                className={`w-full h-5/6 ${findSkillImage(
+                  id,
+                )} bg-contain bg-no-repeat bg-center `}
+              />
+              <div className="mt-10 text-lighter text-3xl font-medium font-body mb-10 flex justify-center">
+                {id.split('-')[1]}
+              </div>
+            </motion.div>
+            <div className="opacity-90 fixed inset-0 z-40 bg-black"></div>
+          </div>
         )}
       </AnimatePresence>
     </div>
