@@ -23,9 +23,9 @@ function SkillsContainer({
       }}
       dragElastic={0.6}
       ref={containerRef}
-      className="h-[700px] w-[400px] md:h-[1000px] md:w-[600px] m-5 overflow-y-auto rounded-lg flex flex-col justify-start items-center pt-5 bg-darker"
+      className="h-[700px] w-[400px] md:h-[1000px] md:w-[600px] m-5 overflow-y-auto rounded-lg flex flex-col justify-start items-center  bg-darker"
     >
-      <div className="select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 hover:cursor-grab active:cursor-grabbing">
+      <div className="bg-dark py-10 border-2 border-darker text-center w-full select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 hover:cursor-grab active:cursor-grabbing">
         {data.type}
       </div>
       <div className="flex flex-col justify-start items-center min-h-min">

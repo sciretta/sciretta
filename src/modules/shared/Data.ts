@@ -76,7 +76,7 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/expressjs.png')]",
       },
       {
-        name: ' Apollo GraphQL',
+        name: 'Apollo GraphQL',
         img: "bg-[url('/apollo.svg')]",
       },
       {
