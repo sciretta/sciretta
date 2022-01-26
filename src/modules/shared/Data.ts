@@ -46,14 +46,14 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/materialui.svg')]",
       },
       { name: 'tailwindcss', img: "bg-[url('/tailwindcss.svg')]" },
-      // {
-      //   name: 'Redux',
-      //   img: 'redux.svg',
-      // },
-      // {
-      //   name: 'React testing library',
-      //   img: 'react-testing-library.svg',
-      // },
+      {
+        name: 'Redux',
+        img: "bg-[url('/redux.svg')]",
+      },
+      {
+        name: 'React testing library',
+        img: "bg-[url('/testing-library.svg')]",
+      },
       {
         name: 'Chakra UI',
         img: "bg-[url('/chakraui.png')]",
@@ -67,34 +67,34 @@ export const allSkills: SkillContainer[] = [
   {
     type: 'Backend',
     skills: [
-      // {
-      //   name: 'Node.js',
-      //   img: 'node.svg',
-      // },
-      // {
-      //   name: 'Express',
-      //   img: 'express.svg',
-      // },
-      // {
-      //   name: ' Apollo GraphQL',
-      //   img: 'apollo.svg',
-      // },
-      // {
-      //   name: 'MongoDB',
-      //   img: 'mongodb.svg',
-      // },
-      // {
-      //   name: 'Firebase',
-      //   img: 'firebase.svg',
-      // },
-      // {
-      //   name: 'Docker',
-      //   img: 'docker.svg',
-      // },
-      // {
-      //   name: '8base',
-      //   img: '8base.svg',
-      // },
+      {
+        name: 'Node.js',
+        img: "bg-[url('/nodejs.svg')]",
+      },
+      {
+        name: 'Express',
+        img: "bg-[url('/expressjs.png')]",
+      },
+      {
+        name: ' Apollo GraphQL',
+        img: "bg-[url('/apollo.svg')]",
+      },
+      {
+        name: 'MongoDB',
+        img: "bg-[url('/mongodb.svg')]",
+      },
+      {
+        name: 'Firebase',
+        img: "bg-[url('/firebase.svg')]",
+      },
+      {
+        name: 'Docker',
+        img: "bg-[url('/docker.png')]",
+      },
+      {
+        name: '8base',
+        img: "bg-[url('/8base.svg')]",
+      },
     ],
   },
 ]
