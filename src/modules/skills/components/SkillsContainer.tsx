@@ -1,7 +1,49 @@
 import { motion } from 'framer-motion'
-import React, { useRef } from 'react'
+import React, { ForwardedRef, forwardRef, ReactChild, useRef } from 'react'
 import { SkillContainer } from 'src/modules/shared/DataTypes'
+import { useWindowWidth } from 'src/modules/shared/hooks'
 import SkillCard from './SkillCard'
+
+const SkillsContainerWrapper = forwardRef(
+  (
+    { layoutId, children }: { layoutId: string; children: ReactChild[] },
+    ref: ForwardedRef<HTMLDivElement | null>,
+  ) => {
+    const width = useWindowWidth()
+
+    if (width === 'sm' || width === 'md')
+      return (
+        <div
+          ref={ref}
+          className="flex h-[1000px] m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker"
+        >
+          {React.Children.map(children, (child) => (
+            <>{child}</>
+          ))}
+        </div>
+      )
+
+    return (
+      <motion.div
+        layoutId={layoutId}
+        drag
+        dragConstraints={{
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0,
+        }}
+        dragElastic={0.6}
+        ref={ref}
+        className="hidden md:h-[1000px] md:w-[600px] md:flex m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker"
+      >
+        {React.Children.map(children, (child) => (
+          <>{child}</>
+        ))}
+      </motion.div>
+    )
+  },
+)
 
 function SkillsContainer({
   data,
@@ -12,20 +54,8 @@ function SkillsContainer({
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   return (
-    <motion.div
-      layoutId={data.type}
-      drag
-      dragConstraints={{
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-      }}
-      dragElastic={0.6}
-      ref={containerRef}
-      className="h-[700px] w-[400px] md:h-[1000px] md:w-[600px] m-5 overflow-y-auto rounded-lg flex flex-col justify-start items-center  bg-darker"
-    >
-      <div className="bg-dark py-10 border-2 border-darker text-center w-full select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 hover:cursor-grab active:cursor-grabbing">
+    <SkillsContainerWrapper layoutId={data.type} ref={containerRef}>
+      <div className="bg-dark py-10 border-2 border-darker text-center w-full select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 md:hover:cursor-grab md:active:cursor-grabbing">
         {data.type}
       </div>
       <div className="flex flex-col justify-start items-center min-h-min">
@@ -49,7 +79,7 @@ function SkillsContainer({
       >
         <img src="./down-arrow.svg" className="h-8 w-8" alt="Down" />
       </button>
-    </motion.div>
+    </SkillsContainerWrapper>
   )
 }
 

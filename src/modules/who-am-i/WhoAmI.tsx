@@ -38,7 +38,7 @@ function WhoAmI() {
             typewriter
               .pauseFor(2000)
               .typeString(
-                `<span style="${primaryFontStyle}">TypeScript, JavaScript ...</span>`,
+                `<span style="${primaryFontStyle}">JavaScript, TypeScript  ...</span>`,
               )
               .pauseFor(3000)
               .deleteAll(130)
