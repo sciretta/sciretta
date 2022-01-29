@@ -53,7 +53,7 @@ function SkillsContainer({
   const containerRef = useRef<HTMLDivElement>(null)
   return (
     <SkillsContainerWrapper layoutId={data.type} ref={containerRef}>
-      <div className="bg-dark py-10 border-2 border-darker text-center w-full select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 lg:hover:cursor-grab lg:active:cursor-grabbing">
+      <div className="bg-dark py-10 border-2 border-darker text-center w-full select-none text-lighter text-3xl font-medium font-body mb-10 lg:hover:cursor-grab lg:active:cursor-grabbing">
         {data.type}
       </div>
       <div className="flex flex-col justify-start items-center min-h-min">
