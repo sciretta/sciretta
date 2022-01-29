@@ -21,6 +21,33 @@ html {
   scroll-behavior: smooth;
 }
 
+.section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.section::-webkit-scrollbar-track {
+  background-color: #0e2128;
+  border-radius: 30px;
+}
+
+.section::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #59899d;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #0e2128;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #59899d;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -15,7 +15,7 @@ const SkillsContainerWrapper = forwardRef(
       return (
         <div
           ref={ref}
-          className="flex h-[1000px] m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker">
+          className="flex h-[1000px] m-5 overflow-y-auto rounded-lg flex-col justify-start items-center bg-darker overflow-x-hidden section">
           {React.Children.map(children, (child) => (
             <>{child}</>
           ))}
@@ -34,7 +34,7 @@ const SkillsContainerWrapper = forwardRef(
         }}
         dragElastic={0.6}
         ref={ref}
-        className="hidden md:h-[1000px] md:w-[600px] md:flex m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker">
+        className="hidden md:h-[1000px] md:w-[600px] md:flex m-5 overflow-y-auto rounded-lg flex-col justify-start items-center bg-darker overflow-x-hidden section">
         {React.Children.map(children, (child) => (
           <>{child}</>
         ))}
