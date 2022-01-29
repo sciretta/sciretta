@@ -7,10 +7,10 @@ import SkillsContainer from './components/SkillsContainer'
 function Skills() {
   const [id, setId] = useState<string | null>(null)
   return (
-    <div id="skills" className="flex flex-col items-evenly">
-      <div className="text-lighter font-medium text-5xl font-body mb-10 flex justify-center">
+    <div id="skills" className="flex flex-col items-evenly pt-16">
+      <span className="text-lighter font-medium text-5xl font-body mb-10 flex justify-center">
         Skills
-      </div>
+      </span>
       <AnimatePresence>
         <div className="min-h-screen flex flex-col items-center justify-evenly xl:flex-row">
           {allSkills.map((item) => (

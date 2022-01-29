@@ -1,3 +1,4 @@
+import Contact from 'src/modules/contact/Contact'
 import Experience from 'src/modules/experience/Experience'
 import TopBar from 'src/modules/shared/components/TopBar'
 import Skills from 'src/modules/skills/Skills'
@@ -11,6 +12,7 @@ export default function Home() {
         <WhoAmI />
         <Skills />
         <Experience />
+        <Contact />
       </div>
     </div>
   )

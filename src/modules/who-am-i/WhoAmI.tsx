@@ -13,7 +13,7 @@ function WhoAmI() {
   useEffect((): void => {
     setTimeout(() => {
       setIsOpen(true)
-    }, 1500)
+    }, 1000)
   }, [])
 
   return (
