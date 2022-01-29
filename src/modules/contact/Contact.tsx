@@ -1,6 +1,4 @@
-// import { motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
-// import Typewriter from 'typewriter-effect'
+import { useState } from 'react'
 // import { useOnScreen } from '../shared/hooks'
 
 // const variants = {
