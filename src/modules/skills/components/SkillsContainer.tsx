@@ -11,12 +11,11 @@ const SkillsContainerWrapper = forwardRef(
   ) => {
     const width = useWindowWidth()
 
-    if (width === 'sm' || width === 'md')
+    if (width === 'sm' || width === 'md' || width === 'lg')
       return (
         <div
           ref={ref}
-          className="flex h-[1000px] m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker"
-        >
+          className="flex h-[1000px] m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker">
           {React.Children.map(children, (child) => (
             <>{child}</>
           ))}
@@ -35,8 +34,7 @@ const SkillsContainerWrapper = forwardRef(
         }}
         dragElastic={0.6}
         ref={ref}
-        className="hidden md:h-[1000px] md:w-[600px] md:flex m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker"
-      >
+        className="hidden md:h-[1000px] md:w-[600px] md:flex m-5 overflow-y-auto rounded-lg flex-col justify-start items-center  bg-darker">
         {React.Children.map(children, (child) => (
           <>{child}</>
         ))}
@@ -55,7 +53,7 @@ function SkillsContainer({
   const containerRef = useRef<HTMLDivElement>(null)
   return (
     <SkillsContainerWrapper layoutId={data.type} ref={containerRef}>
-      <div className="bg-dark py-10 border-2 border-darker text-center w-full select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 md:hover:cursor-grab md:active:cursor-grabbing">
+      <div className="bg-dark py-10 border-2 border-darker text-center w-full select-none text-lighter text-3xl font-medium text-3xl font-body mb-10 lg:hover:cursor-grab lg:active:cursor-grabbing">
         {data.type}
       </div>
       <div className="flex flex-col justify-start items-center min-h-min">
@@ -75,8 +73,7 @@ function SkillsContainer({
             behavior: 'smooth',
           })
         }
-        className="sticky bottom-5 opacity-20 z-10 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
-      >
+        className="sticky bottom-5 opacity-20 z-10 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
         <img src="./down-arrow.svg" className="h-8 w-8" alt="Down" />
       </button>
     </SkillsContainerWrapper>

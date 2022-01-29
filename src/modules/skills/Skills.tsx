@@ -20,13 +20,11 @@ function Skills() {
         {id && (
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-            onClick={() => setId(null)}
-          >
+            onClick={() => setId(null)}>
             <motion.div
               layoutId={id}
               onClick={() => setId(null)}
-              className=" ml-auto mr-auto z-50 h-[500px] w-[440px] md:h-[700px] md:w-[600px] rounded-sm bg-dark px-10 py-10 flex flex-col rounded-md"
-            >
+              className=" ml-auto mr-auto z-50 h-[500px] w-[440px] md:h-[700px] md:w-[600px] rounded-sm bg-dark px-10 py-10 flex flex-col rounded-md">
               <div
                 className={`w-full h-5/6 ${findSkillImage(
                   id,
