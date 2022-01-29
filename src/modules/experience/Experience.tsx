@@ -14,12 +14,11 @@ function Experience() {
   const isIntersecting = useOnScreen(ref)
 
   useEffect((): void => {
-    if (!isIntersecting) return
-    setIsOpen(true)
+    setIsOpen(isIntersecting)
   }, [isIntersecting])
 
   return (
-    <div className="flex flex-col items-evenly mt-40 h-screen">
+    <div id="experience" className="flex flex-col items-evenly mt-40 max-h-fit">
       <div className="text-lighter font-medium text-5xl font-body mb-10 flex justify-center">
         Experience
       </div>
@@ -43,7 +42,7 @@ function Experience() {
             animate={isOpen ? 'open' : 'closed'}
             initial={{ opacity: 0 }}
             transition={{ type: 'just', delay: 0.6 }}
-            className="flex w-full text-start text-lighter font-medium text-base font-body">
+            className="flex w-full md:w-4/6 text-start text-lighter font-medium text-base font-body">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter

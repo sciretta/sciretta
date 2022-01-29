@@ -7,19 +7,16 @@ function TopBar() {
       <img className="h-8 w-8 rounded-full" src="./avatar.png" alt="" />
       <div className=" hidden sm:block rounded-full focus:ring-white">
         <div className="flex space-x-4">
-          <a href="#" className={navAnchorClass} aria-current="page">
+          <a href="#whoami" className={navAnchorClass} aria-current="page">
             Who I Am
           </a>
-
-          <a href="#" className={navAnchorClass}>
+          <a href="#skills" className={navAnchorClass}>
             Skills
           </a>
-
-          <a href="#" className={navAnchorClass}>
+          <a href="#experience" className={navAnchorClass}>
             Experience
           </a>
-
-          <a href="#" className={navAnchorClass}>
+          <a href="#contact" className={navAnchorClass}>
             Contact
           </a>
         </div>

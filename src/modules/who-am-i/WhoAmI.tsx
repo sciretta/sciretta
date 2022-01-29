@@ -17,7 +17,9 @@ function WhoAmI() {
   }, [])
 
   return (
-    <div className="h-screen min-h-min flex justify-center items-center flex-col text-center">
+    <div
+      id="whoami"
+      className="h-screen min-h-min flex justify-center items-center flex-col text-center">
       <motion.div
         variants={variants}
         animate={isOpen ? 'open' : 'closed'}
