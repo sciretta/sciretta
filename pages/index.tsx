@@ -1,8 +1,7 @@
+import Experience from 'src/modules/experience/Experience'
 import TopBar from 'src/modules/shared/components/TopBar'
 import Skills from 'src/modules/skills/Skills'
 import WhoAmI from 'src/modules/who-am-i/WhoAmI'
-// const Main = loadable(() => import('views/Main'))
-// <Main fallback={<Loading display="main section 👋" />} />
 
 export default function Home() {
   return (
@@ -11,6 +10,7 @@ export default function Home() {
       <div className="p-5">
         <WhoAmI />
         <Skills />
+        <Experience />
       </div>
     </div>
   )

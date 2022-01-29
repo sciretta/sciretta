@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
-import { allSkills } from '../shared/Data'
+import { allSkills } from '../shared/data'
 import { findSkillImage } from '../shared/utils'
 import SkillsContainer from './components/SkillsContainer'
 
@@ -8,7 +8,7 @@ function Skills() {
   const [id, setId] = useState<string | null>(null)
   return (
     <div className="flex flex-col items-evenly">
-      <div className="text-lighter font-medium text-6xl font-body mb-10 flex justify-center">
+      <div className="text-lighter font-medium text-5xl font-body mb-10 flex justify-center">
         Skills
       </div>
       <AnimatePresence>
