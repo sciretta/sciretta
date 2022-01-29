@@ -1,4 +1,4 @@
-import { allSkills } from './data'
+import { allSkills } from './Data'
 
 /*
  * @description - Find Skill image.

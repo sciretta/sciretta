@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
-import { allSkills } from '../shared/data'
+import { allSkills } from '../shared/Data'
 import { findSkillImage } from '../shared/utils'
 import SkillsContainer from './components/SkillsContainer'
 
