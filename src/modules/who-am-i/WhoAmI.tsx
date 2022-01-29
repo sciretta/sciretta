@@ -7,9 +7,6 @@ const variants = {
   closed: { opacity: 0, y: '20px' },
 }
 
-const primaryFontStyle =
-  'color: #ADBECC; font-family: Open Sans, Helvetica; font-weight: 500; font-size: 1.875rem;'
-
 function WhoAmI() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -26,31 +23,26 @@ function WhoAmI() {
         animate={isOpen ? 'open' : 'closed'}
         initial={{ opacity: 0 }}
         transition={{ type: 'just', delay: 0.6 }}
-      >
-        <div className="text-lighter text-3xl font-medium font-body mb-10">
-          Hello I am
-        </div>
-        <div className="text-lighter  font-medium text-6xl font-body mb-10">
+        className="text-lighter text-3xl font-medium font-body">
+        <span className="mb-10 block">Hello I am</span>
+        <span className="block text-lighter font-medium text-6xl font-body mb-10">
           Leonardo Sciretta
-        </div>
+        </span>
         <Typewriter
           onInit={(typewriter) => {
             typewriter
               .pauseFor(2000)
-              .typeString(
-                `<span style="${primaryFontStyle}">JavaScript, TypeScript  ...</span>`,
-              )
+              .typeString(`<span">JavaScript, TypeScript  ...</span>`)
               .pauseFor(3000)
-              .deleteAll(130)
-              .typeString(
-                `<span style="${primaryFontStyle}">Web and Mobile developer.</span>`,
-              )
+              .deleteAll(20)
+              .typeString(`<span">Web and Mobile developer.</span>`)
               .start()
           }}
           options={{
-            cursor: `<span style="${primaryFontStyle}">|</span>`,
+            cursor: `<span">|</span>`,
           }}
         />
+        <span className="block mb-10" />
       </motion.div>
       <motion.div
         variants={variants}
@@ -61,27 +53,23 @@ function WhoAmI() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-        }}
-      >
+        }}>
         <div className="mt-5 flex justify-center items-center w-10/12 h-20">
           <button
             className="w-16 h-16"
-            onClick={() => open('https://github.com/sciretta')}
-          >
+            onClick={() => open('https://github.com/sciretta')}>
             <img src="./github.svg" alt="Github" />
           </button>
           <button
             className="ml-6 mr-6 w-16 h-16"
-            onClick={() => console.log('gmail')}
-          >
+            onClick={() => console.log('gmail')}>
             <img src="./gmail.svg" alt="Github" />
           </button>
           <button
             className="w-16 h-16"
             onClick={() =>
               open('https://www.linkedin.com/in/leonardo-sciretta-a43939201')
-            }
-          >
+            }>
             <img src="./linkedin.svg" alt="Github" />
           </button>
         </div>
