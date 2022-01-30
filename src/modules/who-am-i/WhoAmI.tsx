@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useRouter } from 'next/router'
+import router from 'next/router'
 import { useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect'
 
@@ -10,7 +10,6 @@ const variants = {
 
 function WhoAmI() {
   const [isOpen, setIsOpen] = useState(false)
-  const router = useRouter()
 
   useEffect((): void => {
     setTimeout(() => {

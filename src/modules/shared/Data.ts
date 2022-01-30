@@ -51,6 +51,10 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/redux.svg')]",
       },
       {
+        name: 'Framer Motion',
+        img: "bg-[url('/framer-motion.svg')]",
+      },
+      {
         name: 'React testing library',
         img: "bg-[url('/testing-library.svg')]",
       },

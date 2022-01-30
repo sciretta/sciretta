@@ -57,7 +57,7 @@ function Experience() {
               onInit={(typewriter) => {
                 typewriter
                   .pasteString(
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, odio? Sed nobis qui tenetur placeat repellat iure incidunt quasi nulla, earum rem quo dolores, delectus, dolore sapiente enim id expedita?',
+                    "CobuildLab is a company located in Miami, FL, that specializes in the development of web and mobile CRM's, CMS's and e-commerce's aplications.<br/>Using tecnologies such as React, NodeJS, GraphQL, NextJS, Auth0, MongoDB, Firebase, 8base, Twilio and more, I have learned to build buisness solutions that are scalable and secure.",
                     null,
                   )
                   .start()

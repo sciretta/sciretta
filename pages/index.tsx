@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import router from 'next/router'
 import { useEffect, useRef } from 'react'
 import Contact from 'src/modules/contact/Contact'
 import Experience from 'src/modules/experience/Experience'
@@ -6,12 +6,12 @@ import {
   Fireworks,
   FireworksContext,
 } from 'src/modules/shared/components/Confetti'
+import Footer from 'src/modules/shared/components/Footer'
 import TopBar from 'src/modules/shared/components/TopBar'
 import Skills from 'src/modules/skills/Skills'
 import WhoAmI from 'src/modules/who-am-i/WhoAmI'
 
 export default function Home() {
-  const router = useRouter()
   const confettiRef = useRef<{
     startAnimation: (customTime?: number) => void
   }>(null)
@@ -36,6 +36,7 @@ export default function Home() {
           <Experience />
           <Contact />
         </div>
+        <Footer />
         <Fireworks ref={confettiRef} />
       </FireworksContext.Provider>
     </div>

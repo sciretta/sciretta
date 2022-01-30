@@ -73,7 +73,7 @@ function SkillsContainer({
             behavior: 'smooth',
           })
         }
-        className="sticky bottom-5 opacity-20 z-10 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+        className="sticky bottom-5 opacity-20 z-5 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
         <img src="./down-arrow.svg" className="h-8 w-8" alt="Down" />
       </button>
     </SkillsContainerWrapper>
