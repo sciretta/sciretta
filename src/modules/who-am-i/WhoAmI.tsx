@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect'
+import { useSetUrlNavigation } from '../shared/hooks'
 
 const variants = {
   open: { opacity: 1, y: 0 },
@@ -9,6 +10,7 @@ const variants = {
 
 function WhoAmI() {
   const [isOpen, setIsOpen] = useState(false)
+  const ref = useSetUrlNavigation('whoami')
 
   useEffect((): void => {
     setTimeout(() => {
@@ -18,6 +20,7 @@ function WhoAmI() {
 
   return (
     <div
+      ref={ref}
       id="whoami"
       className="h-screen min-h-min flex justify-center items-center flex-col text-center">
       <motion.div

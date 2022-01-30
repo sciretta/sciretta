@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { FireworksContext } from '../shared/components/Confetti'
-import { useOnScreen } from '../shared/hooks'
+import { useOnScreen, useSetUrlNavigation } from '../shared/hooks'
 import { SendEmailData, SendEmailResponse } from '../shared/types'
 
 const variants = {
@@ -27,6 +27,7 @@ function Contact() {
   const ref = useRef<HTMLDivElement>(null)
   const isIntersecting = useOnScreen(ref)
   const fireworks = useContext(FireworksContext)
+  const navigationRef = useSetUrlNavigation('contact')
 
   useEffect((): void => {
     setIsOpen(isIntersecting)
@@ -41,6 +42,7 @@ function Contact() {
 
   function sendEmail() {
     if (disabledButton) return
+    setDisabledButton(true)
     const data: SendEmailData = {
       name,
       email,
@@ -62,8 +64,11 @@ function Contact() {
           setName('')
           if (!fireworks?.startAnimation) return
           fireworks.startAnimation(2000)
+
+          setDisabledButton(false)
         } else {
           setError(res.message)
+          setDisabledButton(false)
         }
       })
       .catch((err) => {
@@ -71,11 +76,13 @@ function Contact() {
         setTimeout(() => {
           setError('')
         }, 5000)
+        setDisabledButton(false)
       })
   }
 
   return (
     <div
+      ref={navigationRef}
       id="contact"
       className="flex flex-col items-evenly mt-40 min-h-screen pt-16">
       <span className="flex text-lighter font-medium text-5xl font-body mb-10 justify-center">
@@ -109,8 +116,8 @@ function Contact() {
             className={`${inputClass} h-auto resize-none`}
           />
           <button
-            className={`mt-10 hover:bg-light transition duration-150 ease-in-out text-darker font-body font-medium rounded-md bg-lighter p-4 ${
-              disabledButton ? disabledButtonClass : ''
+            className={`mt-10  transition duration-150 ease-in-out text-darker font-body font-medium rounded-md bg-lighter p-4 ${
+              disabledButton ? disabledButtonClass : 'hover:bg-light'
             }`}
             onClick={sendEmail}>
             Send email

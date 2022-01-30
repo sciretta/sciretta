@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect'
-import { useOnScreen } from '../shared/hooks'
+import { useOnScreen, useSetUrlNavigation } from '../shared/hooks'
 
 const variants = {
   open: { opacity: 1, y: 0 },
@@ -12,6 +12,7 @@ function Experience() {
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const isIntersecting = useOnScreen(ref)
+  const navigationRef = useSetUrlNavigation('experience')
 
   useEffect((): void => {
     setIsOpen(isIntersecting)
@@ -19,6 +20,7 @@ function Experience() {
 
   return (
     <div
+      ref={navigationRef}
       id="experience"
       className="flex flex-col items-evenly mt-40 max-h-fit pt-16">
       <span className="text-lighter font-medium text-5xl font-body mb-10 flex justify-center">
