@@ -1,30 +1,48 @@
-import loadable from '@loadable/component'
+import router from 'next/router'
 import Head from 'next/head'
-import { ThemeProvider } from '@material-ui/core/styles'
-import { lightTheme } from 'styles/Theme'
-import { Loading } from 'components/Loading'
-
-const Layout = loadable(() => import('views/Layout'))
-const Main = loadable(() => import('views/Main'))
-const Frontend = loadable(() => import('views/Frontend'))
-const General = loadable(() => import('views/General'))
-const Backend = loadable(() => import('views/Backend'))
-const Experience = loadable(() => import('views/Experience'))
+import { useEffect, useRef } from 'react'
+import Contact from 'src/modules/contact/Contact'
+import Experience from 'src/modules/experience/Experience'
+import {
+  Fireworks,
+  FireworksContext,
+} from 'src/modules/shared/components/Confetti'
+import Footer from 'src/modules/shared/components/Footer'
+import TopBar from 'src/modules/shared/components/TopBar'
+import Skills from 'src/modules/skills/Skills'
+import WhoAmI from 'src/modules/who-am-i/WhoAmI'
 
 export default function Home() {
+  const confettiRef = useRef<{
+    startAnimation: (customTime?: number) => void
+  }>(null)
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.replace('#whoami')
+      confettiRef.current && confettiRef.current.startAnimation()
+    }, 1000)
+  }, [])
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <div className="bg-dark">
       <Head>
         <title>Leonardo Sciretta</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <Main fallback={<Loading display="main section 👋" />} />
-        <Experience fallback={<Loading display="experience 💪" />} />
-        <General fallback={<Loading display="general skills 📖" />} />
-        <Frontend fallback={<Loading display="frontend skills ✌" />} />
-        <Backend fallback={<Loading display="backend skills 👌" />} />
-      </Layout>
-    </ThemeProvider>
+      <FireworksContext.Provider
+        value={{
+          startAnimation: (time) => confettiRef.current?.startAnimation(time),
+        }}>
+        <TopBar />
+        <div className="p-5">
+          <WhoAmI />
+          <Skills />
+          <Experience />
+          <Contact />
+        </div>
+        <Footer />
+        <Fireworks ref={confettiRef} />
+      </FireworksContext.Provider>
+    </div>
   )
 }
