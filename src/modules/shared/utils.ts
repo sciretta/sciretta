@@ -25,3 +25,15 @@ export const findSkillImage = (id: string): string => {
 
   return image
 }
+
+export const multiTriggeredActionHandler = (
+  cb: () => void,
+  delay = 500,
+): void => {
+  let timeout
+  clearTimeout(timeout)
+
+  timeout = setTimeout(() => {
+    cb()
+  }, delay)
+}

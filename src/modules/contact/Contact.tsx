@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { FireworksContext } from '../shared/components/Confetti'
-import { useOnScreen, useSetUrlNavigation } from '../shared/hooks'
+import { useOnScreen } from '../shared/hooks'
 import { SendEmailData, SendEmailResponse } from '../shared/types'
 
 const variants = {
@@ -27,7 +27,6 @@ function Contact() {
   const ref = useRef<HTMLDivElement>(null)
   const isIntersecting = useOnScreen(ref)
   const fireworks = useContext(FireworksContext)
-  const navigationRef = useSetUrlNavigation('contact')
 
   useEffect((): void => {
     setIsOpen(isIntersecting)
@@ -82,7 +81,6 @@ function Contact() {
 
   return (
     <div
-      ref={navigationRef}
       id="contact"
       className="flex flex-col items-evenly mt-40 min-h-screen pt-16">
       <span className="flex text-lighter font-medium text-5xl font-body mb-10 justify-center">

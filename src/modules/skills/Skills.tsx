@@ -1,19 +1,14 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { allSkills } from '../shared/Data'
-import { useSetUrlNavigation } from '../shared/hooks'
 import { findSkillImage } from '../shared/utils'
 import SkillsContainer from './components/SkillsContainer'
 
 function Skills() {
   const [id, setId] = useState<string | null>(null)
-  const navigationRef = useSetUrlNavigation('skills')
 
   return (
-    <div
-      ref={navigationRef}
-      id="skills"
-      className="flex flex-col items-evenly pt-16">
+    <div id="skills" className="flex flex-col items-evenly pt-16">
       <span className="text-lighter font-medium text-5xl font-body mb-10 flex justify-center">
         Skills
       </span>

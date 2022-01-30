@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect'
-import { useSetUrlNavigation } from '../shared/hooks'
 
 const variants = {
   open: { opacity: 1, y: 0 },
@@ -10,7 +10,7 @@ const variants = {
 
 function WhoAmI() {
   const [isOpen, setIsOpen] = useState(false)
-  const ref = useSetUrlNavigation('whoami')
+  const router = useRouter()
 
   useEffect((): void => {
     setTimeout(() => {
@@ -20,7 +20,6 @@ function WhoAmI() {
 
   return (
     <div
-      ref={ref}
       id="whoami"
       className="h-screen min-h-min flex justify-center items-center flex-col text-center">
       <motion.div
@@ -67,7 +66,7 @@ function WhoAmI() {
           </button>
           <button
             className="ml-6 mr-6 w-16 h-16"
-            onClick={() => console.log('gmail')}>
+            onClick={() => router.replace('#contact')}>
             <img src="./gmail.svg" alt="Github" />
           </button>
           <button

@@ -1,5 +1,4 @@
-import { useRouter } from 'next/router'
-import { RefObject, useEffect, useRef, useState } from 'react'
+import { RefObject, useEffect, useState } from 'react'
 import { TailwindBreakpoints } from './types'
 
 export function useWindowWidth(): TailwindBreakpoints {
@@ -46,18 +45,4 @@ export function useOnScreen(ref: RefObject<HTMLDivElement>): boolean {
   }, [])
 
   return isIntersecting
-}
-
-export function useSetUrlNavigation(
-  section: string,
-): RefObject<HTMLDivElement> {
-  const ref = useRef<HTMLDivElement>(null)
-  const isIntersecting = useOnScreen(ref)
-  const router = useRouter()
-
-  useEffect((): void => {
-    if (isIntersecting) router.replace(`#${section}`)
-  }, [isIntersecting])
-
-  return ref
 }
