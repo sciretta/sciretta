@@ -5,7 +5,7 @@ import { useOnScreen } from '../shared/hooks'
 
 const variants = {
   open: { opacity: 1, y: 0 },
-  closed: { opacity: 0, y: '20px' },
+  closed: { opacity: 0, y: '40px' },
 }
 
 function Experience() {
