@@ -1,4 +1,5 @@
 import router from 'next/router'
+import Head from 'next/head'
 import { useEffect, useRef } from 'react'
 import Contact from 'src/modules/contact/Contact'
 import Experience from 'src/modules/experience/Experience'
@@ -25,6 +26,9 @@ export default function Home() {
 
   return (
     <div className="bg-dark">
+      <Head>
+        <title>Leonardo Sciretta</title>
+      </Head>
       <FireworksContext.Provider
         value={{
           startAnimation: (time) => confettiRef.current?.startAnimation(time),
