@@ -13,6 +13,10 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/typescript.svg')]",
       },
       {
+        name: 'Expo',
+        img: "bg-[url('/expo.svg')]",
+      },
+      {
         name: 'Git',
         img: "bg-[url('/git.svg')]",
       },
@@ -34,7 +38,7 @@ export const allSkills: SkillContainer[] = [
     type: 'Frontend',
     skills: [
       {
-        name: 'React',
+        name: 'React/React Native',
         img: "bg-[url('/React.svg')]",
       },
       {
