@@ -80,7 +80,9 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="flex flex-col items-evenly min-h-screen pt-16">
+    <div
+      id="contact"
+      className="flex flex-col items-evenly min-h-screen pt-16 mb-10">
       <span className="flex text-lighter font-medium text-5xl font-body mb-10 justify-center">
         Contact
       </span>
