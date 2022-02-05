@@ -22,6 +22,12 @@ html {
   overflow-x: hidden;
 }
 
+html {
+  overflow-y: scroll;
+  scrollbar-color: #59899d #0e2128;
+  scrollbar-width: 10px;
+}
+
 html::-webkit-scrollbar,
 textarea::-webkit-scrollbar,
 .section::-webkit-scrollbar {
