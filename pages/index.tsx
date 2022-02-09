@@ -23,7 +23,7 @@ export default function Home() {
       confettiRef.current && confettiRef.current.startAnimation()
     }, 1000)
 
-    fetch('/api/tracker')
+    fetch('/api/analitycs')
   }, [])
 
   return (

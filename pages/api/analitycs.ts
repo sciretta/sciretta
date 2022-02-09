@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 import { SendEmailResponse } from 'src/modules/shared/types'
 import requestIp from 'request-ip'
+import geoip from 'geoip-lite'
 
 export default async (
   req: NextApiRequest,
@@ -9,6 +10,7 @@ export default async (
 ) => {
   const ip = requestIp.getClientIp(req)
   const platform = req.headers['sec-ch-ua-platform']
+  const geo = geoip.lookup(ip as string)
 
   if (req.method !== 'GET')
     return res.status(400).json({ success: false, message: 'Bad request' })
@@ -23,11 +25,13 @@ export default async (
 
   const html = `
     <div>
-      <strong>${ip}</strong> viwed your website
-      <div>
-        <br/>
-        <strong>Responder: ${platform}</strong>
-      </div>
+      <strong>${ip} viwed your website</strong> 
+      <br/>
+      from <strong>${(geo?.city, geo?.country)}</strong> 
+      <br/>
+        
+        <strong>Platform used: ${platform}</strong>
+      
     </div>
   `
 
@@ -36,7 +40,7 @@ export default async (
       process.env.MAIN_USER_ADRESS as string,
       process.env.SECONDARY_USER_ADRESS as string,
     ],
-    subject: `Someone viwed your website`,
+    subject: `Someone viwed your website in ${geo?.country}`,
     html,
   }
 
