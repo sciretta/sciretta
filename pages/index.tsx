@@ -22,6 +22,8 @@ export default function Home() {
       router.replace('#whoami')
       confettiRef.current && confettiRef.current.startAnimation()
     }, 1000)
+
+    fetch('/api/tracker')
   }, [])
 
   return (
