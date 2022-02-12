@@ -29,7 +29,7 @@
   <a target="_blank" href="https://www.linkedin.com/in/leonardo-sciretta-a43939201">
     <img src="https://img.shields.io/badge/-Leonardo%20Sciretta-0077B5?style=flat-square&logo=Linkedin&logoColor=white"/>
   </a>
-  <a target="_blank" href="https://leonardo28.vercel.app/">
-    <img src="https://img.shields.io/badge/-Personal%20site-%23040309?color=black&textColor=white"/>
+  <a target="_blank" href="https://leonardo28.vercel.app/#contact">
+    <img src="https://img.shields.io/badge/-Personal%20site-%23040309?color=black&textColor=white&logo=Gmail"/>
   </a>
 </p
