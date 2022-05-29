@@ -17,6 +17,10 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/expo.svg')]",
       },
       {
+        name: 'GraphQL',
+        img: "bg-[url('/graphql.svg')]",
+      },
+      {
         name: 'Git',
         img: "bg-[url('/git.svg')]",
       },
@@ -25,8 +29,8 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/jest.svg')]",
       },
       {
-        name: 'GraphQL',
-        img: "bg-[url('/graphql.svg')]",
+        name: 'Mocha (testing)',
+        img: "bg-[url('/mocha.png')]",
       },
       {
         name: 'GiHub',
@@ -62,14 +66,6 @@ export const allSkills: SkillContainer[] = [
         name: 'React testing library',
         img: "bg-[url('/testing-library.svg')]",
       },
-      {
-        name: 'Chakra UI',
-        img: "bg-[url('/chakraui.png')]",
-      },
-      {
-        name: 'Styled Components',
-        img: "bg-[url('/styledcomponents.png')]",
-      },
     ],
   },
   {
@@ -80,12 +76,16 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/nodejs.svg')]",
       },
       {
+        name: 'Apollo GraphQL',
+        img: "bg-[url('/apollo.svg')]",
+      },
+      {
         name: 'Express',
         img: "bg-[url('/expressjs.png')]",
       },
       {
-        name: 'Apollo GraphQL',
-        img: "bg-[url('/apollo.svg')]",
+        name: 'Nest.js',
+        img: "bg-[url('/nestjs.svg')]",
       },
       {
         name: 'MongoDB',
