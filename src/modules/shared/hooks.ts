@@ -33,16 +33,20 @@ export function useWindowWidth(): TailwindBreakpoints {
 export function useOnScreen(ref: RefObject<HTMLDivElement>): boolean {
   const [isIntersecting, setIntersecting] = useState(false)
 
+  const width = useWindowWidth()
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) =>
       setIntersecting(entry.isIntersecting),
     )
+    if (!ref?.current) return
     observer.observe(ref.current as Element)
+
     // Remove the observer as soon as the component is unmounted
     return () => {
       observer.disconnect()
     }
-  }, [])
+  }, [width])
 
   return isIntersecting
 }
