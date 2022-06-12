@@ -26,7 +26,7 @@ function Experience() {
 
   useEffect(() => {
     switch (width) {
-      case 'md':
+      case 'md' || 'lg':
         setZoom(0.5)
         break
       case 'sm':
@@ -73,7 +73,7 @@ function Experience() {
         </motion.div>
       )}
       {['md', 'sm', 'lg'].includes(width) ? (
-        <div className="grid items-center justify-center h-[400px]">
+        <div className="grid items-center justify-center h-[400px] md:mt-[200px]">
           <DeviceFrameset device="MacBook Pro" zoom={zoom}>
             <img
               style={{ height: '100%', width: '100%' }}
@@ -100,7 +100,7 @@ function Experience() {
         </motion.div>
       )}
       {['md', 'sm', 'lg'].includes(width) ? (
-        <div className="grid items-center justify-center h-[400px]">
+        <div className="grid items-center justify-center h-[400px] md:mt-[200px]">
           <DeviceFrameset device="MacBook Pro" zoom={zoom}>
             <img
               style={{ height: '90%', width: '100%' }}
@@ -127,7 +127,7 @@ function Experience() {
         </motion.div>
       )}
       {['md', 'sm', 'lg'].includes(width) ? (
-        <div className="grid items-center justify-center h-[600px]">
+        <div className="grid items-center justify-center h-[600px] md:mt-[200px]">
           <DeviceFrameset
             device="iPhone X"
             height={750}
