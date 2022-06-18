@@ -9,7 +9,7 @@ export default async (req: NextApiRequest) => {
   const geo = geoip.lookup(ip as string)
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'yahoo',
     auth: {
       user: process.env.SECONDARY_USER_ADRESS,
       pass: process.env.SECONDARY_PASSWORD,
@@ -22,9 +22,7 @@ export default async (req: NextApiRequest) => {
       <br/>
       Location data: <strong>${JSON.stringify(geo)}</strong> 
       <br/>
-        
         <strong>Platform used: ${platform}</strong>
-      
     </div>
   `
 
