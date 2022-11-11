@@ -1,32 +1,21 @@
-import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { DeviceFrameset } from 'react-device-frameset'
 import { useWindowWidth } from '../shared/hooks'
-import { useGetIntersectingZone } from './experience-hooks'
-
-const variantsRight = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: '400px' },
-}
-
-const variantsLeft = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: '-400px' },
-}
 
 function Experience() {
-  const [refFisherman, isOpenFisherman] = useGetIntersectingZone()
-  const [refLeadVolt, isOpenLeadVolt] = useGetIntersectingZone()
-  const [refResident, isOpenResident] = useGetIntersectingZone()
-  const [refCuplr, isOpenCuplr] = useGetIntersectingZone()
-
   const [zoom, setZoom] = useState(0.6)
 
   const width = useWindowWidth()
 
   useEffect(() => {
     switch (width) {
-      case 'md' || 'lg':
+      case 'xl':
+        setZoom(0.6)
+        break
+      case 'lg':
+        setZoom(0.6)
+        break
+      case 'md':
         setZoom(0.5)
         break
       case 'sm':
@@ -45,8 +34,11 @@ function Experience() {
         Experience
       </span>
 
-      {['md', 'sm', 'lg'].includes(width) ? (
-        <div className="grid items-center justify-center h-[400px]">
+      <div className="flex justify-center flex-wrap">
+        <div
+          className={`flex items-center justify-center ${
+            width === 'sm' ? 'max-h-[400px]' : 'max-h-[550px]'
+          }`}>
           <DeviceFrameset device="MacBook Pro" zoom={zoom}>
             <img
               style={{ height: '100%', width: '100%' }}
@@ -55,25 +47,10 @@ function Experience() {
             />
           </DeviceFrameset>
         </div>
-      ) : (
-        <motion.div
-          className="grid items-center justify-center"
-          ref={refFisherman}
-          variants={variantsRight}
-          animate={isOpenFisherman ? 'open' : 'closed'}
-          initial={{ opacity: 0 }}
-          transition={{ type: 'just', delay: 0.6 }}>
-          <DeviceFrameset device="MacBook Pro" zoom={zoom}>
-            <img
-              style={{ height: '100%', width: '100%' }}
-              src="/fisherman-landing.png"
-              alt="fisherman"
-            />
-          </DeviceFrameset>
-        </motion.div>
-      )}
-      {['md', 'sm', 'lg'].includes(width) ? (
-        <div className="grid items-center justify-center h-[400px] md:mt-[200px]">
+        <div
+          className={`flex items-center justify-center ${
+            width === 'sm' ? 'max-h-[400px]' : 'max-h-[550px]'
+          }`}>
           <DeviceFrameset device="MacBook Pro" zoom={zoom}>
             <img
               style={{ height: '100%', width: '100%' }}
@@ -82,25 +59,10 @@ function Experience() {
             />
           </DeviceFrameset>
         </div>
-      ) : (
-        <motion.div
-          className="grid items-center justify-center"
-          ref={refLeadVolt}
-          variants={variantsLeft}
-          animate={isOpenLeadVolt ? 'open' : 'closed'}
-          initial={{ opacity: 0 }}
-          transition={{ type: 'just', delay: 0.6 }}>
-          <DeviceFrameset device="MacBook Pro" zoom={zoom}>
-            <img
-              style={{ height: '100%', width: '100%' }}
-              src="/leadvolt-landing.png"
-              alt="leadvolt"
-            />
-          </DeviceFrameset>
-        </motion.div>
-      )}
-      {['md', 'sm', 'lg'].includes(width) ? (
-        <div className="grid items-center justify-center h-[400px] md:mt-[200px]">
+        <div
+          className={`flex items-center justify-center ${
+            width === 'sm' ? 'max-h-[400px]' : 'max-h-[550px]'
+          }`}>
           <DeviceFrameset device="MacBook Pro" zoom={zoom}>
             <img
               style={{ height: '90%', width: '100%' }}
@@ -109,25 +71,48 @@ function Experience() {
             />
           </DeviceFrameset>
         </div>
-      ) : (
-        <motion.div
-          className="grid items-center justify-center"
-          ref={refResident}
-          variants={variantsRight}
-          animate={isOpenResident ? 'open' : 'closed'}
-          initial={{ opacity: 0 }}
-          transition={{ type: 'just', delay: 0.6 }}>
-          <DeviceFrameset device="MacBook Pro" zoom={zoom}>
+      </div>
+
+      <div className="flex justify-center flex-wrap">
+        <div
+          className={`flex items-center justify-center ${
+            width === 'sm' ? 'max-h-[400px]' : 'max-h-[550px]'
+          }`}>
+          <DeviceFrameset
+            device="Samsung Galaxy S5"
+            height={655}
+            width={370}
+            zoom={zoom}>
             <img
-              style={{ height: '90%', width: '100%' }}
-              src="/resident-landing.png"
-              alt="resident"
+              src="/flash_rewards.webp"
+              width="100%"
+              height="100%"
+              alt="cuplr"
             />
           </DeviceFrameset>
-        </motion.div>
-      )}
-      {['md', 'sm', 'lg'].includes(width) ? (
-        <div className="grid items-center justify-center h-[600px] md:mt-[200px]">
+        </div>
+
+        <div
+          className={`flex items-center justify-center ${
+            width === 'sm' ? 'max-h-[400px]' : 'max-h-[550px]'
+          }`}>
+          <DeviceFrameset
+            device="Galaxy Note 8"
+            height={630}
+            width={390}
+            zoom={zoom}>
+            <img
+              src="/retro_points.png"
+              width="100%"
+              height="100%"
+              alt="cuplr"
+            />
+          </DeviceFrameset>
+        </div>
+        <div
+          className={`flex items-center justify-center ${
+            width === 'sm' ? 'max-h-[400px]' : 'max-h-[550px]'
+          }`}>
           <DeviceFrameset
             device="iPhone X"
             height={750}
@@ -141,28 +126,7 @@ function Experience() {
             />
           </DeviceFrameset>
         </div>
-      ) : (
-        <motion.div
-          className="grid items-center justify-center h-[700px]"
-          ref={refCuplr}
-          variants={variantsLeft}
-          animate={isOpenCuplr ? 'open' : 'closed'}
-          initial={{ opacity: 0 }}
-          transition={{ type: 'just', delay: 0.6 }}>
-          <DeviceFrameset
-            device="iPhone X"
-            height={750}
-            width={370}
-            zoom={zoom}>
-            <img
-              src="/cuplrwallet-landing.png"
-              width="100%"
-              height="100%"
-              alt="cuplr"
-            />
-          </DeviceFrameset>
-        </motion.div>
-      )}
+      </div>
     </div>
   )
 }

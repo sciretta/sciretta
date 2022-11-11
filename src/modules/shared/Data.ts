@@ -13,28 +13,16 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/typescript.svg')]",
       },
       {
-        name: 'Expo',
-        img: "bg-[url('/expo.svg')]",
+        name: 'Rust',
+        img: "bg-[url('/rust_crab.svg')]",
       },
       {
         name: 'GraphQL',
         img: "bg-[url('/graphql.svg')]",
       },
       {
-        name: 'Git',
-        img: "bg-[url('/git.svg')]",
-      },
-      {
         name: 'Jest (testing)',
         img: "bg-[url('/jest.svg')]",
-      },
-      {
-        name: 'Mocha (testing)',
-        img: "bg-[url('/mocha.png')]",
-      },
-      {
-        name: 'GiHub',
-        img: "bg-[url('/github.svg')]",
       },
     ],
   },
@@ -50,21 +38,12 @@ export const allSkills: SkillContainer[] = [
         img: "bg-[url('/Nextjs.svg')]",
       },
       {
-        name: 'Material UI',
-        img: "bg-[url('/materialui.svg')]",
-      },
-      { name: 'tailwindcss', img: "bg-[url('/tailwindcss.svg')]" },
-      {
-        name: 'Redux',
-        img: "bg-[url('/redux.svg')]",
+        name: 'Expo',
+        img: "bg-[url('/expo.svg')]",
       },
       {
-        name: 'Framer Motion',
-        img: "bg-[url('/framer-motion.svg')]",
-      },
-      {
-        name: 'React testing library',
-        img: "bg-[url('/testing-library.svg')]",
+        name: 'Android Studio',
+        img: "bg-[url('/android_studio.svg')]",
       },
     ],
   },
@@ -98,10 +77,6 @@ export const allSkills: SkillContainer[] = [
       {
         name: 'Docker',
         img: "bg-[url('/docker.png')]",
-      },
-      {
-        name: '8base',
-        img: "bg-[url('/8base.svg')]",
       },
     ],
   },

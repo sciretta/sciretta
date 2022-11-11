@@ -27,7 +27,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="bg-dark">
+    <html className="bg-dark">
       <Head>
         <title>Leonardo Sciretta</title>
       </Head>
@@ -45,6 +45,6 @@ export default function Home() {
         <Footer />
         <Fireworks ref={confettiRef} />
       </FireworksContext.Provider>
-    </div>
+    </html>
   )
 }
