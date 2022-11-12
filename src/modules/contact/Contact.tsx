@@ -89,7 +89,7 @@ function Contact() {
       <div
         ref={ref}
         className="h-[75vh] min-h-[500px] flex justify-center lg:justify-between p-16">
-        <div className="flex flex-col items-center h-fit bg-darker rounded-xl w-1/2 min-w-[300px] p-8">
+        <div className="flex flex-col items-center h-[550px] bg-darker rounded-xl w-1/2 min-w-[300px] p-8">
           <div className="w-full flex-col md:flex-row flex items-center justify-between mb-8">
             <input
               onChange={(e): void => setName(e.target.value)}
@@ -132,7 +132,7 @@ function Contact() {
           animate={isOpen ? 'open' : 'closed'}
           initial={{ opacity: 0 }}
           transition={{ type: 'just', delay: 0.6 }}
-          className="min-h-48 hidden lg:flex flex-col w-1/2 px-8">
+          className="h-[550px] min-h-48 hidden lg:flex flex-col w-1/2 px-8">
           <span className="flex text-lighter font-medium text-3xl font-body mb-10 justify-center">
             Let's talk
           </span>
