@@ -78,6 +78,7 @@ function Experience() {
           className={`flex items-center justify-center ${
             width === 'sm' ? 'max-h-[400px]' : 'max-h-[550px]'
           }`}>
+          {/*@ts-ignore */}
           <DeviceFrameset
             device="Samsung Galaxy S5"
             height={655}
