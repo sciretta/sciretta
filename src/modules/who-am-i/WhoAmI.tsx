@@ -88,21 +88,30 @@ function WhoAmI() {
         }}>
         <div className="mt-5 flex justify-center items-center w-10/12 h-20">
           <button
-            className="w-16 h-16"
+            className="w-16 h-16 flex justify-center items-center mr-6"
             onClick={() => open('https://github.com/sciretta')}>
             <img src="./github.svg" alt="Github" />
           </button>
           <button
-            className="ml-6 mr-6 w-16 h-16"
+            className="w-16 h-16 flex justify-center items-center mr-6"
             onClick={() => router.replace('#contact')}>
             <img src="./gmail.svg" alt="Github" />
           </button>
           <button
-            className="w-16 h-16"
+            className="w-16 h-16 flex justify-center items-center mr-6"
             onClick={() =>
               open('https://www.linkedin.com/in/leonardo-sciretta-a43939201')
             }>
             <img src="./linkedin.svg" alt="Github" />
+          </button>
+          <button
+            className="w-16 h-16 flex justify-center items-center"
+            onClick={() =>
+              open(
+                'https://matching.turing.com/developer-resume-preview/899884623285ce5d22f1fbc974204bf0a57b96de940e96',
+              )
+            }>
+            <img src="./turing.svg" alt="Turing" />
           </button>
         </div>
       </motion.div>
