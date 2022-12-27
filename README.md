@@ -6,11 +6,13 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/sciretta/sciretta/9232a39be70d54bc073688201101f29abea26f18/public/javascript.svg" width="100">
   <img src="https://raw.githubusercontent.com/sciretta/sciretta/9232a39be70d54bc073688201101f29abea26f18/public/typescript.svg" width="100">
+  <img src="https://raw.githubusercontent.com/sciretta/sciretta/0f6171889e15b46b35a369233bb2f0c720e007e8/public/rust_crab.svg" width="100">
    <br><br>
   <img src="https://raw.githubusercontent.com/sciretta/sciretta/9232a39be70d54bc073688201101f29abea26f18/public/React.svg" width="100">
   <img src="https://raw.githubusercontent.com/sciretta/sciretta/9232a39be70d54bc073688201101f29abea26f18/public/nodejs.svg" width="100">
   <img src="https://raw.githubusercontent.com/sciretta/sciretta/9232a39be70d54bc073688201101f29abea26f18/public/Nextjs.svg" width="100">
   <img src="https://raw.githubusercontent.com/sciretta/sciretta/9232a39be70d54bc073688201101f29abea26f18/public/expo.svg" width="100">
+  <img src="https://raw.githubusercontent.com/sciretta/sciretta/0f6171889e15b46b35a369233bb2f0c720e007e8/public/android_studio.svg" width="100">
 </p>
 <br><br>
 
