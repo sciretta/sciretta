@@ -25,7 +25,7 @@ function Footer() {
           className="w-16 h-16 flex justify-center items-center"
           onClick={() =>
             open(
-              'https://matching.turing.com/developer-resume-preview/899884623285ce5d22f1fbc974204bf0a57b96de940e96',
+              'https://matching.turing.com/developer-resume-preview/a9c913d24334ad21702eadf9e48adb061b0f5acb575fb3',
             )
           }>
           <img src="./turing.svg" alt="Turing" />
