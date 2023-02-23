@@ -20,9 +20,9 @@
 
 <p align="center">
   <a href="https://github.com/sciretta">
-    <img width="480em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=sciretta&theme=chartreuse-dark&layout=compact&hide=html,css" />
-    <img width="480em" src="https://streak-stats.demolab.com?user=sciretta&theme=chartreuse-dark&hide_border=true">
-    <img width="480em" src="https://github-readme-stats.vercel.app/api?username=sciretta&show_icons=true&theme=chartreuse-dark" />
+    <img width="480em" height="200em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=sciretta&theme=chartreuse-dark&layout=compact&hide=html,css" />
+    <img width="480em" height="200em" src="https://streak-stats.demolab.com?user=sciretta&theme=chartreuse-dark">
+    <img width="480em" height="200em" src="https://github-readme-stats.vercel.app/api?username=sciretta&show_icons=true&theme=chartreuse-dark" />
   </a>
 </p>
 
